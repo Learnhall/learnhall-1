@@ -407,7 +407,7 @@ footer {
 **********************/
 @media only screen and (min-width: 960px) and (max-width: 1440px) {
   .become-tutor .img .background-img {
-    height: 690px;
+    height: 665px;
   }
   .become-tutor .brown-background {
     margin-top: 68px;
@@ -427,12 +427,12 @@ footer {
     height: 500px;
   }
   .become-tutor .text {
-    margin-top: 145px;
+    margin-top: 120px;
   }
   .become-tutor .text h2 {
     width: 436px;
     font-size: 50px;
-    height: 135px;
+    height: 120px;
   }
   .become-tutor .text p {
     margin-top: 15px;
@@ -441,7 +441,7 @@ footer {
   }
   .become-tutor .text button {
     font-size: 18px;
-    margin-top: 35px;
+    margin-top: 30px;
     width: 188px;
     height: 48px;
     border-radius: 8px;

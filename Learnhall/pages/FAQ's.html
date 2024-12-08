@@ -166,13 +166,20 @@
                     </div>
     
                     <form id="jquery_form" class="email">
-                        <h4 > Subscribe to our free e-newsletter</h4>
+                        <h4>Subscribe to our free e-newsletter</h4>
                         <div>
-                             <input type="email" placeholder="email address" name="email"> 
-                            <button id="subscribe-submit" type="submit" name="send">Subscribe</button>
-    
+                          <input
+                            type="email"
+                            placeholder="email address"
+                            name="email"
+                            required
+                          />
+                          <button id="subscribe-submit" type="submit" name="send">
+                            Subscribe
+                          </button>
+                          <p class="error-message">Please enter a valid email address.</p>
                         </div>
-                    </form > 
+                      </form>
     
                     <hr>
     
