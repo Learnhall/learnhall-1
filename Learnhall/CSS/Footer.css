@@ -81,6 +81,7 @@ footer {
 .info .text li a:hover {
   text-decoration: underline;
 }
+
 footer hr {
   border: 1px solid;
   width: 100%;
@@ -95,33 +96,42 @@ footer .email {
   display: flex;
   justify-content: end;
 }
-footer .email input{
+footer .email input {
   border: 2px solid #ffffff9e;
 }
-input::placeholder{
+input::placeholder {
   color: #ffffff9e;
 }
-footer .email input{
-  color: #ffffff9e ;
+footer .email input {
+  color: #ffffff9e;
   background-color: transparent;
 }
 footer .email div {
   display: block;
   position: absolute;
 }
-footer .email h4{
+footer .email h4 {
   display: block;
 }
-footer .email h4{
+footer .email h4 {
   color: #ffffff;
 }
-footer .email button{
+footer .email button {
   background-color: #c04c40;
   border-color: #c04c40;
   color: #ffffff;
 }
-footer .email h4{
+footer .email h4 {
   color: #ffffff;
+}
+footer .email .error-message {
+  color: #ff6b6b;
+  font-size: 14px;
+  display: block;
+  position: relative;
+  padding-top: 10px;
+  width: 100%;
+  display: none;
 }
 
 /**********************
@@ -130,7 +140,7 @@ footer .email h4{
 @media only screen and (min-width: 1440px) {
   footer {
     height: 500px;
-    margin-top: 799px;
+    margin-top: 790px;
   }
   .logo-image-1 {
     height: 38px;
@@ -231,7 +241,7 @@ footer .email h4{
     margin-top: 37px;
     margin-right: 23px;
   }
-  footer .email h4{
+  footer .email h4 {
     font-size: 20px;
     font-weight: 700px;
     margin-right: 371px;
@@ -239,7 +249,7 @@ footer .email h4{
   footer .email div {
     width: 670px;
   }
-  footer .email input{
+  footer .email input {
     margin-top: 46px;
     height: 45px;
     width: 481px;
@@ -247,10 +257,10 @@ footer .email h4{
     font-size: 18px;
     font-weight: 300px;
   }
-  footer .email button{
+  footer .email button {
     margin-left: 10px;
     height: 45px;
-    width: 155px; 
+    width: 155px;
     border-radius: 8px;
     font-size: 18px;
     font-weight: 700px;
@@ -263,7 +273,7 @@ footer .email h4{
 @media only screen and (min-width: 960px) and (max-width: 1440px) {
   footer {
     height: 500px;
-    margin-top: 689px;
+    margin-top: 714px;
   }
   .logo-image-1 {
     height: 38px;
@@ -368,7 +378,7 @@ footer .email h4{
     margin-top: 37px;
     margin-right: 23px;
   }
-  footer .email h4{
+  footer .email h4 {
     font-size: 18px;
     font-weight: 700px;
     margin-right: 281px;
@@ -376,7 +386,7 @@ footer .email h4{
   footer .email div {
     width: 555px;
   }
-  footer .email input{
+  footer .email input {
     margin-top: 36px;
     height: 40px;
     width: 381px;
@@ -384,10 +394,10 @@ footer .email h4{
     font-size: 16px;
     font-weight: 300px;
   }
-  footer .email button{
+  footer .email button {
     margin-left: 10px;
     height: 40px;
-    width: 135px; 
+    width: 135px;
     border-radius: 8px;
     font-size: 16px;
     font-weight: 700px;
@@ -533,7 +543,7 @@ footer .email h4{
     padding-top: 190px;
     justify-content: start;
   }
-  footer .email h4{
+  footer .email h4 {
     font-size: 18px;
     font-weight: 700px;
     margin-left: -30px;
@@ -541,7 +551,7 @@ footer .email h4{
   footer .email div {
     width: max-content;
   }
-  footer .email input{
+  footer .email input {
     margin-top: 36px;
     height: 37px;
     width: 341px;
@@ -550,10 +560,10 @@ footer .email h4{
     font-weight: 300px;
     margin-left: -30px;
   }
-  footer .email button{
+  footer .email button {
     margin-left: 10px;
     height: 37px;
-    width: 135px; 
+    width: 135px;
     border-radius: 8px;
     font-size: 15px;
     font-weight: 700px;
@@ -718,7 +728,7 @@ footer .email h4{
     padding-top: 160px;
     justify-content: start;
   }
-  footer .email h4{
+  footer .email h4 {
     font-size: 12px;
     font-weight: 700px;
     margin-left: -17px;
@@ -726,7 +736,7 @@ footer .email h4{
   footer .email div {
     width: max-content;
   }
-  footer .email input{
+  footer .email input {
     margin-top: 30px;
     height: 32px;
     width: 171px;
@@ -735,10 +745,10 @@ footer .email h4{
     font-weight: 300px;
     margin-left: -17px;
   }
-  footer .email button{
+  footer .email button {
     margin-left: 10px;
     height: 32px;
-    width: 75px; 
+    width: 75px;
     border-radius: 8px;
     font-size: 10px;
     font-weight: 700px;
