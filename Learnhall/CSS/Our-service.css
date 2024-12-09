@@ -1,3 +1,4 @@
+/* Animation Styling */
 /* Animation keyframes */
 @keyframes slideInUp {
   from {
@@ -10,20 +11,21 @@
   }
 }
 
-/* Base style for step-box */
+/* Initial state for step-box */
 .service-works .steps-container .step-box {
   opacity: 0; /* Fully hidden initially */
   transform: translateY(50px); /* Positioned below */
 }
 
-/* Active state triggers animation */
-.service-works.active .steps-container .step-box {
+/* Trigger animation when .visible class is added */
+.service-works .steps-container .step-box.visible {
   animation: slideInUp 0.8s ease forwards;
   animation-delay: calc(
     var(--step-index) * 1s + 1s
   ); /* Stagger delay + initial delay */
 }
 
+/* General Styling */
 .service-works {
   width: 100%;
   position: relative;

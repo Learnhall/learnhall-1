@@ -1,35 +1,38 @@
-/* Styling for animations */
+/* Animation Styling */
 /* Initial state: hidden */
 .choose-us-info .text h2,
 .choose-us-info .text p,
 .choose-us-info .widget-box {
   opacity: 0;
-  transform: translateX(-50%);
+  transform: translateX(-50%); /* Start from the left */
 }
 
-/* When 'active' class is added */
-.choose-us-info.active .text h2,
-.choose-us-info.active .text p {
+/* When 'visible' class is added (after the element reaches the viewport) */
+.choose-us-info .text h2.visible,
+.choose-us-info .text p.visible,
+.choose-us-info .widget-box.visible {
   animation: slideIn 0.5s ease forwards;
 }
 
-.choose-us-info.active .text h2 {
+/* Staggered animation delays for text */
+.choose-us-info .text h2.visible {
   animation-delay: 0.2s;
 }
 
-.choose-us-info.active .text p {
+.choose-us-info .text p.visible {
   animation-delay: 0.5s;
 }
 
-.choose-us-info.active .widget-box {
-  animation: slideIn 0.5s ease forwards;
+/* Staggered animation delays for widgets */
+.choose-us-info .widget-box.visible {
   animation-delay: calc(var(--widget-index) * 0.3s + 0.8s);
 }
 
+/* Keyframe for sliding in animation */
 @keyframes slideIn {
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(0); /* Move to original position */
   }
 }
 

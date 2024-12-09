@@ -1,4 +1,5 @@
-/* Initial state */
+/* Animation Styling */
+/* Initial state: hidden for text and content elements */
 .parent-reviews .text-1 h2,
 .parent-reviews .text-1 p,
 .parent-reviews .content {
@@ -6,17 +7,21 @@
   transform: translateY(50px);
 }
 
-/* Active state */
-.parent-reviews.active .text-1 h2,
-.parent-reviews.active .text-1 p {
+/* When the 'visible' class is added to text elements */
+.parent-reviews .text-1 h2.visible,
+.parent-reviews .text-1 p.visible {
   animation: fadeInUp 0.5s ease forwards;
 }
 
-.parent-reviews.active .content {
+/* When the 'visible' class is added to content */
+.parent-reviews .content.visible {
   animation: fadeInUp 0.8s ease forwards;
-  animation-delay: calc(var(--review-index) * 0.7s + 0.9s);
+  animation-delay: calc(
+    var(--review-index) * 0.7s + 0.9s
+  ); /* Staggered delay */
 }
 
+/* Keyframe for the animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -28,6 +33,7 @@
   }
 }
 
+/* General Styling */
 .parent-reviews {
   width: 100%;
   text-align: center;
