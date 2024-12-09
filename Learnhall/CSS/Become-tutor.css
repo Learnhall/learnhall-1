@@ -1,3 +1,22 @@
+/* Define the shake animation */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 main {
   background: rgba(31, 49, 88, 0.02);
 }
@@ -32,9 +51,13 @@ main {
 .become-tutor .text h2 {
   font-family: "adobe-garamond-pro", serif;
 }
-.become-tutor .text button a {
+.become-tutor .text a button {
   text-decoration: none;
   color: #ffffff;
+}
+
+.become-tutor .text a button:hover {
+  animation: shake 0.5s ease-in-out;
 }
 
 .become-tutor .text button a:hover {
