@@ -1,3 +1,29 @@
+/* Animation keyframes */
+@keyframes slideInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Base style for step-box */
+.service-works .steps-container .step-box {
+  opacity: 0; /* Fully hidden initially */
+  transform: translateY(50px); /* Positioned below */
+}
+
+/* Active state triggers animation */
+.service-works.active .steps-container .step-box {
+  animation: slideInUp 0.8s ease forwards;
+  animation-delay: calc(
+    var(--step-index) * 1s + 1s
+  ); /* Stagger delay + initial delay */
+}
+
 .service-works {
   width: 100%;
   position: relative;
