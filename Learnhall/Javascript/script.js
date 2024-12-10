@@ -215,60 +215,6 @@ $(function () {
     return false;
   }
 
-  $(document).ready(function () {
-    $(".book-a-session-form, .become-a-tutor-form").submit(function (event) {
-      event.preventDefault();
-      n;
-
-      const formId = $(this).attr("class");
-      if (validateForm(this)) {
-        send();
-      }
-    });
-
-    function validateForm(form) {
-      let isValid = true;
-
-      $(form)
-        .find("input, textarea")
-        .each(function () {
-          const input = $(this);
-          const errorMessage = input.siblings(".error-message");
-
-          if (input.val().trim() === "") {
-            errorMessage.text("This field is required");
-            isValid = false;
-          } else if (
-            input.attr("type") === "email" &&
-            !validateEmail(input.val())
-          ) {
-            errorMessage.text("Please enter a valid email");
-            isValid = false;
-          } else if (
-            input.attr("type") === "tel" &&
-            !validatePhone(input.val())
-          ) {
-            errorMessage.text("Please enter a valid phone number");
-            isValid = false;
-          } else {
-            errorMessage.text("");
-          }
-        });
-
-      return isValid;
-    }
-
-    function validateEmail(email) {
-      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return re.test(email);
-    }
-
-    function validatePhone(phone) {
-      const re = /^\d{10}$/;
-      return re.test(phone);
-    }
-  });
-
   /* show and hide FAQ's */
   function show_FAQ(z) {
     $(z + ".FAQ-p").show();
