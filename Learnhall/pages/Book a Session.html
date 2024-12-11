@@ -15,31 +15,10 @@
     <!-- Links to Stylesheets -->
     <link rel="stylesheet" href="../CSS/Header.css" />
     <link rel="stylesheet" href="../CSS/Footer.css" />
+    <link rel="stylesheet" href="../CSS/Book-a-session.css" />
 
     <!--Links to Mediaquerries-->
     <link rel="stylesheet" href="../CSS/MediaQuerries.css" />
-    <link
-      rel="stylesheet"
-      media="screen and (min-width: 1440px)"
-      href="../CSS/MediaQuerries.css"
-    />
-    <link
-      rel="stylesheet"
-      media="screen and (min-width: 960px) and (max-width: 1440px)"
-      href="../CSS/MediaQuerries.css"
-    />
-    <link
-      rel="stylesheet"
-      media="screen and (min-width: 576px) and (max-width: 960px)"
-      href="../CSS/MediaQuerries.css"
-    />
-    <link
-      rel="stylesheet"
-      media="screen and (max-width: 576px)"
-      href="../CSS/MediaQuerries.css"
-    />
-
-    <link rel="stylesheet" href="../CSS/Book-a-session.css" />
   </head>
 
   <body>
@@ -60,7 +39,6 @@
             <!-- nav bar area -->
             <div class="nav-bar">
               <ul>
-                <li><a href="../Index.html">Home</a></li>
                 <li>
                   <a
                     class="nav book-session-header"
@@ -69,8 +47,23 @@
                     >Book a Session</a
                   >
                 </li>
-                <li><a href="./Become a Tutor.html">Become a Tutor</a></li>
-                <li><a href="./FAQ's.html">Blog</a></li>
+                <li><a href="Become a Tutor.html">Become a Tuter</a></li>
+                <li>
+                  <a
+                    href="https://blog.learnhall.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Blog</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://businesstraining.learnhall.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >B2B</a
+                  >
+                </li>
                 <li>
                   <img src="../images/contact.png" alt="phone-icon" />
                   <span><a href="tel:503-342-7214">503-342-7214</a></span>
@@ -99,14 +92,31 @@
         <div class="nav-bar-hamburger-menu">
           <div class="hamburger-menu">
             <ul>
-              <li><a href="../Index.html">Home</a></li>
               <li>
-                <a style="color: #070a13" href="./Book a Session.html"
+                <a
+                  class="nav book-session-header"
+                  style="color: #070a13"
+                  href="./Book a Session.html"
                   >Book a Session</a
                 >
               </li>
-              <li><a href="./Become a Tutor.html">Become a Tutor</a></li>
-              <li><a href="./FAQ's.html">Blog</a></li>
+              <li><a href="Become a Tutor.html">Become a Tuter</a></li>
+              <li>
+                <a
+                  href="https://blog.learnhall.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://businesstraining.learnhall.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >B2B</a
+                >
+              </li>
               <li>
                 <img src="../images/contact.png" alt="phone-icon-hamburger" />
                 <span><a href="tel:503-342-7214">503-342-7214</a></span>
@@ -127,32 +137,68 @@
             <div class="book-a-session-inputs">
               <div>
                 <label for="first-name">First Name*</label>
-                <input type="text" name="first-name" id="first-name" required />
+                <input
+                  type="text"
+                  name="first-name"
+                  id="first-name"
+                  required
+                  autocomplete="given-name"
+                />
                 <span class="error-message" id="first-name-error"></span>
               </div>
               <div>
                 <label for="last-name">Last Name*</label>
-                <input type="text" name="last-name" id="last-name" required />
+                <input
+                  type="text"
+                  name="last-name"
+                  id="last-name"
+                  required
+                  autocomplete="family-name"
+                />
                 <span class="error-message" id="last-name-error"></span>
               </div>
               <div>
                 <label for="email">Email*</label>
-                <input type="email" name="email" id="email" required />
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  autocomplete="email"
+                />
                 <span class="error-message" id="email-error"></span>
               </div>
               <div>
                 <label for="phone">Phone*</label>
-                <input type="tel" name="phone" id="phone" required />
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  required
+                  autocomplete="tel"
+                />
                 <span class="error-message" id="phone-error"></span>
               </div>
               <div>
                 <label for="location">Location*</label>
-                <input type="text" name="location" id="location" required />
+                <input
+                  type="text"
+                  name="location"
+                  id="location"
+                  required
+                  autocomplete="address-level2"
+                />
                 <span class="error-message" id="location-error"></span>
               </div>
               <div>
                 <label for="zip-code">Zip Code*</label>
-                <input type="text" name="zip-code" id="zip-code" required />
+                <input
+                  type="text"
+                  name="zip-code"
+                  id="zip-code"
+                  required
+                  autocomplete="postal-code"
+                />
                 <span class="error-message" id="zip-code-error"></span>
               </div>
               <div>
@@ -162,6 +208,7 @@
                   name="student-grade"
                   id="student-grade"
                   required
+                  autocomplete="off"
                 />
                 <span class="error-message" id="student-grade-error"></span>
               </div>
@@ -172,6 +219,7 @@
                   name="student-subject"
                   id="student-subject"
                   required
+                  autocomplete="off"
                 />
                 <span class="error-message" id="student-subject-error"></span>
               </div>
@@ -243,7 +291,6 @@
               <a class="img-3" :href="'../' + contact.link"
                 ><img :src="'../' + contact.img3" alt=""
               /></a>
-              <!-- Fix links -->
             </div>
           </div>
 
@@ -252,7 +299,14 @@
               <h4>About Us</h4>
               <ul>
                 <li><a href="./FAQ's.html">FAQs</a></li>
-                <li><a href="./FAQ's.html">Blog</a></li>
+                <li>
+                  <a
+                    href="https://blog.learnhall.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Blog</a
+                  >
+                </li>
                 <li><a href="./FAQ's.html">Reviews</a></li>
               </ul>
             </div>
@@ -328,6 +382,22 @@
         </div>
       </section>
     </main>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/5dcd85a143be710e1d1d53da/default";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+    <!--End of Tawk.to Script-->
   </body>
 
   <script src="../Javascript/JQuery.js"></script>
@@ -338,5 +408,9 @@
   <script
     type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="https://embed.tawk.to/5dcd85a143be710e1d1d53da/default"
   ></script>
 </html>
