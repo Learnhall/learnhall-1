@@ -6,45 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Favcon image and text -->
-    <link rel="icon" href="images/Logo.png" type="image/png" />
+    <link rel="icon" href="./images/Logo.png" type="image/png" />
     <title>Learnhall</title>
 
     <!-- font link -->
     <link rel="stylesheet" href="https://use.typekit.net/xea2kuh.css" />
 
     <!-- Links to Stylesheets -->
-    <link rel="stylesheet" href="CSS/Header.css" />
-    <link rel="stylesheet" href="CSS/learnhall-info.css" />
-    <link rel="stylesheet" href="CSS/Choose-us.css" />
-    <link rel="stylesheet" href="CSS/Our-service.css" />
-    <link rel="stylesheet" href="CSS/Parent-reviews.css" />
-    <link rel="stylesheet" href="CSS/Video-testemonial.css" />
-    <link rel="stylesheet" href="CSS/Become-tutor.css" />
-    <link rel="stylesheet" href="CSS/Footer.css" />
+    <link rel="stylesheet" href="./CSS/Header.css" />
+    <link rel="stylesheet" href="./CSS/learnhall-info.css" />
+    <link rel="stylesheet" href="./CSS/Choose-us.css" />
+    <link rel="stylesheet" href="./CSS/Our-service.css" />
+    <link rel="stylesheet" href="./CSS/Parent-reviews.css" />
+    <link rel="stylesheet" href="./CSS/Video-testemonial.css" />
+    <link rel="stylesheet" href="./CSS/Become-tutor.css" />
+    <link rel="stylesheet" href="./CSS/Footer.css" />
 
     <!--Links to Mediaquerries-->
-    <link rel="stylesheet" href="CSS/MediaQuerries.css" />
-    <link
-      rel="stylesheet"
-      media="screen and (min-width: 1440px)"
-      href="CSS/MediaQuerries.css"
-    />
-    <link
-      rel="stylesheet"
-      media="screen and (min-width: 960px) and (max-width: 1440px)"
-      href="CSS/MediaQuerries.css"
-    />
-    <link
-      rel="stylesheet"
-      media="screen and (min-width: 576px) and (max-width: 960px)"
-      href="CSS/MediaQuerries.css"
-    />
-    <link
-      rel="stylesheet"
-      media="screen and (max-width: 576px)"
-      href="CSS/MediaQuerries.css"
-    />
+    <link rel="stylesheet" href="./CSS/MediaQuerries.css" />
   </head>
+
+
   <body>
     <main id="App">
       <header>
@@ -63,10 +45,10 @@
             <!-- nav bar area -->
             <div class="nav-bar">
               <ul>
-                <li><a style="color: #070a13" href="Index.html">Home</a></li>
                 <li><a href="pages/Book a Session.html">Book a Session</a></li>
                 <li><a href="pages/Become a Tutor.html">Become a Tuter</a></li>
-                <li><a href="pages/FAQ's.html">Blog</a></li>
+                <li><a href="https://blog.learnhall.com/" target="_blank" rel="noopener noreferrer">Blog</a></li>
+                <li><a href="https://businesstraining.learnhall.com/" target="_blank" rel="noopener noreferrer">B2B</a></li>
                 <li>
                   <img src="images/contact.png" alt="phone-icon" />
                   <span><a href="tel:503-342-7214">503-342-7214</a></span>
@@ -95,10 +77,10 @@
         <div class="nav-bar-hamburger-menu">
           <div class="hamburger-menu">
             <ul>
-              <li><a style="color: #070a13" href="Index.html">Home</a></li>
               <li><a href="pages/Book a Session.html">Book a Session</a></li>
-              <li><a href="pages/Become a Tutor.html">Become a Tuter</a></li>
-              <li><a href="pages/FAQ's.html">Blog</a></li>
+                <li><a href="pages/Become a Tutor.html">Become a Tuter</a></li>
+                <li><a href="https://blog.learnhall.com/" target="_blank" rel="noopener noreferrer">Blog</a></li>
+                <li><a href="https://businesstraining.learnhall.com/" target="_blank" rel="noopener noreferrer">B2B</a></li>
               <li>
                 <img src="images/contact.png" alt="phone-icon-hamburger" />
                 <span><a href="tel:503-342-7214">503-342-7214</a></span>
@@ -504,7 +486,6 @@
               <a class="img-3" :href="contact.link"
                 ><img :src="contact.img3" alt=""
               /></a>
-              <!-- Fix links -->
             </div>
           </div>
 
@@ -513,7 +494,12 @@
               <h4>About Us</h4>
               <ul>
                 <li><a href="pages/FAQ's.html">FAQs</a></li>
-                <li><a href="pages/FAQ's.html">Blog</a></li>
+                <li><a
+                  href="https://blog.learnhall.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Blog</a
+                ></li>
                 <li><a href="pages/FAQ's.html">Reviews</a></li>
               </ul>
             </div>
@@ -565,10 +551,32 @@
         </div>
       </footer>
     </main>
+      <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/5dcd85a143be710e1d1d53da/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
   </body>
+
   <script src="javascript/JQuery.js"></script>
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="javascript/Vue.js"></script>
   <script src="javascript/script.js"></script>
   <script src="javascript/animations.js"></script>
+  <script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+></script>
+<script
+type="text/javascript"
+src="https://embed.tawk.to/5dcd85a143be710e1d1d53da/default"
+></script>
 </html>

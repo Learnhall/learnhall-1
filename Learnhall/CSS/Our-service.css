@@ -21,7 +21,7 @@
 .service-works .steps-container .step-box.visible {
   animation: slideInUp 0.8s ease forwards;
   animation-delay: calc(
-    var(--step-index) * 1s + 1s
+    var(--step-index) * 0.5s + 1s
   ); /* Stagger delay + initial delay */
 }
 
