@@ -177,33 +177,40 @@ var parents_reviews = [
 var FAQs = [
   {
     id: "a",
-    question: "Lorem ipsum dolor sit amet, consectetur adipiscing eli?",
+    question: "How soon can I hire a tutor from Learnhall?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est l",
+      "You can hire a tutor immediately by messaging us on here (on the chatbot or the inquiry form) or by emailing us at info@learnhall.com.  You can also call us at 503.342.7214 as we always strive to serve the needs of each student/family by providing white-glove service.",
   },
   {
     id: "b",
-    question: "Lorem ipsum dolor sit amet, consectetur adipiscing eli?",
+    question: "How much does Learnhall charge?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est l",
+      "We are extremely competitive in this market in terms of cost, especially when considering that all of our tutors are well-vetted college students or graduates (with some MS grads and PhDs as well) and are experts at the subjects they tutor.  And we are flexible as well!  It doesn't hurt to ask us what we can reasonably do in terms of pricing as we love tutoring and we don't like to lose students over price if at all possible.",
   },
   {
     id: "c",
-    question: "Lorem ipsum dolor sit amet, consectetur adipiscing eli?",
+    question: "Does Learnhall require long-term contracts?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est l",
+      "NO.  Most of our students work with us on a weekly sessions either once, twice, or three times per week (depending on need).  We don't require onerous long-term contracts to engage with us.",
   },
   {
     id: "d",
-    question: "Lorem ipsum dolor sit amet, consectetur adipiscing eli?",
+    question:
+      "What subjects and exams can my Learnhall tutor help with (and what else can they help with)?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est l",
+      "We can help with any and all subjects and with any and all exams.  These can be for young people or adults.  Exams that we tutor include the GED, the SAT, the ACT, the GRE, the LSAT, the GMAT, the MCAT, the TOEIC, the TOEFL, the IELTS, etc.  Subjects that we tutor include all levels of Math, Science, History, and English (even through college).  We can also help students write their college application essays or any other essay.",
   },
   {
     id: "e",
-    question: "Lorem ipsum dolor sit amet, consectetur adipiscing eli?",
+    question: "Will my tutor meet me in person or will sessions be online?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est l",
+      "It's up to you.  It's more costly for in-person sessions for obvious reasons, yet we have no preference in terms of whether sessions are online or in-person.  For in-person sessions, we always prefer to meet at your residence or a local library (or at a quiet study room somewhere).",
+  },
+  {
+    id: "f",
+    question: "How is the pricing broken down?",
+    answer:
+      "Depending on whether you want in-person tutoring for one student, online tutoring for one student, in-person tutoring for a group of students, or online tutoring for a group of students, the pricing is tiered and gets cheaper depending on the modality.",
   },
 ];
 
