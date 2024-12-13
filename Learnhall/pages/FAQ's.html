@@ -125,35 +125,42 @@
           <!-- The missing opening div tag for FAQ loop should be properly closed here -->
           <div v-for="FAQ in FAQ" class="FAQ-container" :id="FAQ.id">
             <div class="block">
-              <div class="FAQ">
-                <h4 :id="FAQ.id">{{FAQ.question}}</h4>
-                <p :id="FAQ.id" class="FAQ-p">{{FAQ.answer}}</p>
-              </div>
-              <div :id="FAQ.id" class="FAQ-img">
-                <img
-                  :id="FAQ.id"
-                  class="FAQ-brown-1"
-                  src="../images/brown-circle.png"
-                  alt=""
-                />
-                <img
-                  :id="FAQ.id"
-                  class="FAQ-cross"
-                  src="../images/cross.png"
-                  alt="open"
-                />
-                <img
-                  :id="FAQ.id"
-                  class="FAQ-brown-2"
-                  src="../images/brown-circle.png"
-                  alt=""
-                />
-                <img
-                  :id="FAQ.id"
-                  class="FAQ-minus"
-                  src="../images/minus.png"
-                  alt="close"
-                />
+                <div class="FAQ">
+                  <div class="FAQ-top"></div>
+                  <h4 :id="FAQ.id">{{FAQ.question}}</h4>
+                  <div :id="FAQ.id" class="FAQ-img">
+                    <div>
+                      <img
+                        :id="FAQ.id"
+                        class="FAQ-brown-1"
+                        src="../images/brown-circle.png"
+                        alt=""
+                      />
+                      <img
+                        :id="FAQ.id"
+                        class="FAQ-cross"
+                        src="../images/cross.png"
+                        alt="open"
+                      />
+                      <img
+                        :id="FAQ.id"
+                        class="FAQ-brown-2"
+                        src="../images/brown-circle.png"
+                        alt=""
+                      />
+                      <img
+                        :id="FAQ.id"
+                        class="FAQ-minus"
+                        src="../images/minus.png"
+                        alt="close"
+                      />
+                    </div>
+                  </div>
+                  <div class="FAQ-bottom">
+                    <p :id="FAQ.id" class="FAQ-p">{{FAQ.answer}}</p>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
