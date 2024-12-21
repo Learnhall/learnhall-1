@@ -1,64 +1,85 @@
-// Shared object to store form values
-let sharedFormValues = {};
+$(".book-a-session-form").submit(function (event) {
+  event.preventDefault(); // Prevent default form submission behavior
 
-document.addEventListener("DOMContentLoaded", () => {
-  const blurSectionElement = document.querySelector(".thank-you-background");
-  const closeHamburgerElement = document.querySelector(".close-hamburger img");
-  const inputsElement = document.querySelectorAll("input");
-  const textareaElement = document.querySelector("textarea");
+  var form = $(this);
+  var isValid = true;
 
-  document
-    .querySelector(".book-a-session-form")
-    .addEventListener("submit", (e) => {
-      e.preventDefault();
+  // Clear all error messages before validation
+  $(".error-message").text("").addClass("hidden"); // Hide and clear previous error messages
 
-      // Store form values in the shared object
-      sharedFormValues = {
-        firstName: document.getElementById("first-name").value || "N/A",
-        lastName: document.getElementById("last-name").value || "N/A",
-        email: document.getElementById("email").value || "N/A",
-        phone: document.getElementById("phone").value || "N/A",
-        location: document.getElementById("location").value || "N/A",
-        zipCode: document.getElementById("zip-code").value || "N/A",
-        studentGrade: document.getElementById("student-grade").value || "N/A",
-        studentSubject:
-          document.getElementById("student-subject").value || "N/A",
-        textarea: document.getElementById("textarea").value || "N/A",
-      };
+  // Validate each field
+  isValid &= validateField("#first-name", /^.+$/, "First name is required."); // Allows any non-empty value
+  isValid &= validateField("#last-name", /^.+$/, "Last name is required."); // Allows any non-empty value
+  isValid &= validateField(
+    "#email",
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+    "Please enter a valid email address."
+  );
+  isValid &= validateField(
+    "#phone",
+    /^[0-9+\-\s()]{6,}$/,
+    "Please enter a valid phone number."
+  ); // Accepts international phone numbers with at least 6 characters
+  isValid &= validateField("#location", /^.+$/, "Location is required."); // Allows any non-empty value
+  isValid &= validateField(
+    "#zip-code",
+    /^[0-9a-zA-Z\s\-]{3,}$/,
+    "Please enter a valid postal code."
+  ); // Handles alphanumeric postal codes globally (e.g., UK, Canada)
+  isValid &= validateField("#student-grade", /^.+$/, "Grade is required."); // Allows any non-empty value
+  isValid &= validateField("#student-subject", /^.+$/, "Subject is required."); // Allows any non-empty value
 
-      // Clear form fields
-      inputsElement.forEach((input) => (input.value = ""));
-      textareaElement.value = "";
-    });
-
-  closeHamburgerElement.addEventListener("click", () => {
-    blurSectionElement.classList.add("none");
-  });
-});
-
-$(document).ready(function () {
-  emailjs.init("t_Ula836MT-Gtn7Nz"); // Initialize EmailJS with your public key
-
-  $(".book-a-session-form").submit(function (event) {
-    event.preventDefault(); // Prevent default form submission
-
-    sendForm(sharedFormValues); // Use the shared form values to send an email
-  });
-});
-
-function sendForm(formData) {
-  const serviceID = "service_vfuyurx";
-  const templateID = "template";
-
-  emailjs.send(serviceID, templateID, formData).then(
-    function (response) {
+  // Proceed with AJAX request to submit form
+  $.ajax({
+    url: form.attr("action"), // Endpoint to send data
+    type: form.attr("method"), // Request type (GET/POST)
+    data: form.serialize(), // Serialize form data for submission
+    success: function (response) {
+      // Show thank-you message and blur background
       const blurSectionElement = document.querySelector(
         ".thank-you-background"
       );
-      blurSectionElement.classList.remove("none");
+      blurSectionElement.classList.remove("none"); // Show the thank-you section
+
+      form[0].reset(); // Reset the form after successful submission
     },
-    function (error) {
-      alert("There was an error sending your request. Please try again.");
-    }
-  );
+    error: function (xhr, textStatus) {
+      if (xhr.status === 200 || textStatus === "error") {
+        const blurSectionElement = document.querySelector(
+          ".thank-you-background"
+        );
+        blurSectionElement.classList.remove("none"); // Show the thank-you section
+        form[0].reset();
+      } else {
+        alert("There was an error processing your request. Please try again.");
+      }
+    },
+  });
+});
+
+// Close thank-you message on clicking the close button
+const closeHamburgerElement = document.querySelector(".close-hamburger img");
+const blurSectionElement = document.querySelector(".thank-you-background");
+
+closeHamburgerElement.addEventListener("click", () => {
+  blurSectionElement.classList.add("none"); // Hide the thank-you section
+});
+
+// Field validation function
+function validateField(selector, regex, errorMessage) {
+  var field = $(selector);
+  var value = field.val().trim();
+  var errorElement = $(`${selector}-error`);
+
+  // If validation fails
+  if (!regex.test(value)) {
+    errorElement.text(errorMessage).removeClass("hidden"); // Display error message
+    field.addClass("error-field"); // Add red border to the field
+    return false;
+  }
+
+  // If validation passes
+  errorElement.text("").addClass("hidden"); // Hide error message
+  field.removeClass("error-field"); // Remove red border
+  return true;
 }

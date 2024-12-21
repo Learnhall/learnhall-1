@@ -239,21 +239,14 @@
             </div>
           </div>
 
-          <form id="jquery_form" class="email">
+          <form id="jquery_form" class="email" action="https://formspree.io/f/movvanvy" method="POST" data-form="true">
             <h4>Subscribe to our free e-newsletter</h4>
             <div>
-              <input
-                type="email"
-                placeholder="email address"
-                name="email"
-                required
-              />
-              <button id="subscribe-submit" type="submit" name="send">
-                Subscribe
-              </button>
-              <p class="error-message">Please enter a valid email address.</p>
+               <input type="email" placeholder="email address" name="email" required id="email-input" />
+               <button id="subscribe-submit" type="submit">Subscribe</button>
+               <p class="error-message" id="error-message" style="display: none;">Please enter a valid email address.</p>
             </div>
-          </form>
+         </form>
 
           <hr />
 
@@ -290,6 +283,7 @@
   <script src="../Javascript/Vue.js"></script>
   <script src="../Javascript/script.js"></script>
   <script src="../Javascript/become-a-tutor.js"></script>
+  <script src="../javascript/sign-up-for-newsletter.js"></script>
   <script
     type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"

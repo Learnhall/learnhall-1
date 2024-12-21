@@ -254,6 +254,21 @@ footer {
   margin-top: 68px;
 }
 
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+  display: block;
+}
+
+.error-message.hidden {
+  display: none;
+}
+
+.error-field {
+  border: 1px solid red;
+}
+
 /**********************
 **** Desktop layout****
 **********************/

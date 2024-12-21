@@ -45,7 +45,7 @@
             <!-- nav bar area -->
             <div class="nav-bar">
               <ul>
-                <li><a href="pages/Book a Session.html">Book a Session</a></li>
+                <li><a href="./pages/Book a Session.html">Book a Session</a></li>
                 <li><a href="pages/Become a Tutor.html">Become a Tuter</a></li>
                 <li><a href="https://blog.learnhall.com/" target="_blank" rel="noopener noreferrer">Blog</a></li>
                 <li><a href="https://businesstraining.learnhall.com/" target="_blank" rel="noopener noreferrer">B2B</a></li>
@@ -523,21 +523,14 @@
             </div>
           </div>
 
-          <form id="jquery_form" class="email">
+          <form id="jquery_form" class="email" action="https://formspree.io/f/movvanvy" method="POST" data-form="true">
             <h4>Subscribe to our free e-newsletter</h4>
             <div>
-              <input
-                type="email"
-                placeholder="email address"
-                name="email"
-                required
-              />
-              <button id="subscribe-submit" type="submit" name="send">
-                Subscribe
-              </button>
-              <p class="error-message">Please enter a valid email address.</p>
+               <input type="email" placeholder="email address" name="email" required id="email-input" />
+               <button id="subscribe-submit" type="submit">Subscribe</button>
+               <p class="error-message" id="error-message" style="display: none;">Please enter a valid email address.</p>
             </div>
-          </form>
+         </form>
 
           <hr />
 
@@ -571,6 +564,7 @@
   <script src="javascript/Vue.js"></script>
   <script src="javascript/script.js"></script>
   <script src="javascript/animations.js"></script>
+  <script src="javascript/sign-up-for-newsletter.js"></script>
   <script
   type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
