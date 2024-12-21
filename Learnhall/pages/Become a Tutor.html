@@ -123,7 +123,11 @@
 
       <section class="become-a-tutor">
         <div class="container become-a-tutor-container">
-          <form action="" class="become-a-tutor-form">
+          <form
+            class="become-a-tutor-form"
+            action="https://formspree.io/f/movvanvy"
+            method="POST"
+          >
             <h2>Become a Tutor</h2>
             <p>
               Please fill out the form below and submit, and we will get back to
@@ -139,7 +143,7 @@
                   required
                   autocomplete="given-name"
                 />
-                <span class="error-message" id="first-name-error"></span>
+                <span class="error-message" id="first-name-1-error"></span>
               </div>
               <div>
                 <label for="last-name-1">Last Name*</label>
@@ -150,7 +154,7 @@
                   required
                   autocomplete="family-name"
                 />
-                <span class="error-message" id="last-name-error"></span>
+                <span class="error-message" id="last-name-1-error"></span>
               </div>
               <div>
                 <label for="email-1">Email*</label>
@@ -161,7 +165,7 @@
                   required
                   autocomplete="email"
                 />
-                <span class="error-message" id="email-error"></span>
+                <span class="error-message" id="email-1-error"></span>
               </div>
               <div>
                 <label for="phone-1">Phone*</label>
@@ -172,7 +176,7 @@
                   required
                   autocomplete="tel"
                 />
-                <span class="error-message" id="phone-error"></span>
+                <span class="error-message" id="phone-1-error"></span>
               </div>
               <div>
                 <label for="location-1">Location*</label>
@@ -183,7 +187,7 @@
                   required
                   autocomplete="address-level2"
                 />
-                <span class="error-message" id="location-error"></span>
+                <span class="error-message" id="location-1-error"></span>
               </div>
               <div>
                 <label for="zip-code-1">Zip Code*</label>
@@ -194,7 +198,7 @@
                   required
                   autocomplete="postal-code"
                 />
-                <span class="error-message" id="zip-code-error"></span>
+                <span class="error-message" id="zip-code-1-error"></span>
               </div>
               <div>
                 <label for="student-grade-1">Student Grade*</label>
@@ -205,7 +209,7 @@
                   required
                   autocomplete="off"
                 />
-                <span class="error-message" id="student-grade-error"></span>
+                <span class="error-message" id="student-grade-1-error"></span>
               </div>
               <div>
                 <label for="student-subject-1">Student Subject*</label>
@@ -216,7 +220,7 @@
                   required
                   autocomplete="off"
                 />
-                <span class="error-message" id="student-subject-error"></span>
+                <span class="error-message" id="student-subject-1-error"></span>
               </div>
             </div>
             <div class="become-a-tutor-textarea first-textarea">
@@ -226,7 +230,7 @@
                 id="about-yourself-1"
                 required
               ></textarea>
-              <span class="error-message" id="about-yourself-error"></span>
+              <span class="error-message" id="about-yourself-1-error"></span>
             </div>
             <div class="become-a-tutor-textarea">
               <label for="experience-1"
@@ -234,7 +238,7 @@
                 teach?*</label
               >
               <textarea name="experience" id="experience-1" required></textarea>
-              <span class="error-message" id="experience-error"></span>
+              <span class="error-message" id="experience-1-error"></span>
             </div>
             <div class="become-a-tutor-button">
               <button type="submit">Submit</button>
@@ -340,7 +344,13 @@
             </div>
           </div>
 
-          <form id="jquery_form" class="email">
+          <form
+            id="jquery_form"
+            class="email"
+            action="https://formspree.io/f/movvanvy"
+            method="POST"
+            data-form="true"
+          >
             <h4>Subscribe to our free e-newsletter</h4>
             <div>
               <input
@@ -348,11 +358,12 @@
                 placeholder="email address"
                 name="email"
                 required
+                id="email-input"
               />
-              <button id="subscribe-submit" type="submit" name="send">
-                Subscribe
-              </button>
-              <p class="error-message">Please enter a valid email address.</p>
+              <button id="subscribe-submit" type="submit">Subscribe</button>
+              <p class="error-message" id="error-message" style="display: none">
+                Please enter a valid email address.
+              </p>
             </div>
           </form>
 
@@ -417,6 +428,7 @@
   <script src="../Javascript/Vue.js"></script>
   <script src="../Javascript/script.js"></script>
   <script src="../Javascript/become-a-tutor.js"></script>
+  <script src="../javascript/sign-up-for-newsletter.js"></script>
   <script
     type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"

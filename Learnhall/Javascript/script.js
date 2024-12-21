@@ -170,51 +170,6 @@ $(function () {
     return nextId, previouseId;
   });
 
-  /* footer email section */
-  var form_id = "jquery_form";
-
-  var data = {
-    access_token: "syky96ehkc3tv2xzzp65uodx",
-  };
-
-  function onSuccess() {
-    window.location =
-      window.location.pathname +
-      "?message=Email+Successfully+Sent%21&isError=0";
-  }
-
-  function onError(error) {
-    window.location =
-      window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
-  }
-
-  var sendButton = $("#" + form_id + " [name='send']");
-
-  function send() {
-    var emailInput = $("#" + form_id + " [name='email']");
-    var email = emailInput.val();
-    var errorMessage = $(".error-message");
-
-    // Regular expression for email validation
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!emailRegex.test(email)) {
-      errorMessage.text("Please enter a valid email address.").show();
-      return false; // Prevent form submission if invalid
-    } else {
-      errorMessage.hide(); // Hide error message if email is valid
-    }
-
-    sendButton.val("Sending…");
-    sendButton.prop("disabled", true);
-
-    data["email"] = email;
-
-    $.post("https://postmail.invotes.com/send", data, onSuccess).fail(onError);
-
-    return false;
-  }
-
   /* show and hide FAQ's */
   function show_FAQ(z) {
     $(z + ".FAQ-p").show();
