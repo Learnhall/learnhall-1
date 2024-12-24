@@ -34,7 +34,7 @@
           <div class="header-content">
             <!-- logo area -->
             <div class="logo-image">
-              <a href="Index.html">
+              <a href="index.html">
                 <img src="images/Logo.png" alt="Logo-icon" />
               </a>
             </div>
@@ -45,8 +45,8 @@
             <!-- nav bar area -->
             <div class="nav-bar">
               <ul>
-                <li><a href="./pages/Book a Session.html">Book a Session</a></li>
-                <li><a href="./pages/Become a Tutor.html">Become a Tuter</a></li>
+                <li><a href="./pages/Book-a-Session.html">Book a Session</a></li>
+                <li><a href="./pages/Become-a-Tutor.html">Become a Tuter</a></li>
                 <li><a href="https://blog.learnhall.com/" target="_blank" rel="noopener noreferrer">Blog</a></li>
                 <li><a href="https://businesstraining.learnhall.com/" target="_blank" rel="noopener noreferrer">B2B</a></li>
                 <li>
@@ -77,8 +77,8 @@
         <div class="nav-bar-hamburger-menu">
           <div class="hamburger-menu">
             <ul>
-              <li><a href="./pages/Book a Session.html">Book a Session</a></li>
-                <li><a href="./pages/Become a Tutor.html">Become a Tuter</a></li>
+              <li><a href="./pages/Book-a-Session.html">Book a Session</a></li>
+                <li><a href="./pages/Become-a-Tutor.html">Become a Tuter</a></li>
                 <li><a href="https://blog.learnhall.com/" target="_blank" rel="noopener noreferrer">Blog</a></li>
                 <li><a href="https://businesstraining.learnhall.com/" target="_blank" rel="noopener noreferrer">B2B</a></li>
               <li>
@@ -175,7 +175,7 @@
                 enthusiastic and seek to bring out the best of the individual
                 learner's potential in both academics as well as life.
               </p>
-                <a href="./pages/Book a Session.html"> <button>Book a Session</button></a>
+                <a href="./pages/Book-a-Session.html"> <button>Book a Session</button></a>
             </div>
           </div>
         </div>
@@ -350,7 +350,7 @@
       <section class="video-testemonial">
         <div>
         <video controls>
-          <source src="./videos/testemonial.mp4#t=8" type="video/mp4" />
+          <source src="./Videos/testemonial.mp4#t=8" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
@@ -446,7 +446,7 @@
               fill out a short form and we will be in contact within 24-48 hours
               for a prospective interview.
             </p> 
-              <a href="./pages/Become a Tutor.html"><button>Become a Tutor</button> </a>
+              <a href="./pages/Become-a-Tutor.html"><button>Become a Tutor</button> </a>
           </div>
         </div>
       </section>
@@ -454,22 +454,22 @@
       <footer>
         <div class="container">
           <div class="logo-image-1">
-            <a href="index.html">
+            <a href="./index.html">
               <img src="./images/Logo.png" alt="Logo-icon" />
             </a>
           </div>
           <div class="logo-text-1">
-            <a href="index.html">Learnhall</a>
+            <a href="./index.html">Learnhall</a>
           </div>
 
           <div class="connect connect-right">
             <span>Let's Connect</span>
             <div v-for="connect in letsConnect" class="img">
-              <a class="img-1" :href="connect.link"
-                ><img :src="connect.img1" alt="link"
+              <a class="img-1" :href="  connect.link"
+                ><img :src="'./' + connect.img1" alt="link"
               /></a>
-              <a class="img-2" :href="connect.link"
-                ><img :src="connect.img2" alt="link"
+              <a class="img-2" :href="  connect.link"
+                ><img :src="'./' + connect.img2" alt="link"
               /></a>
             </div>
           </div>
@@ -477,14 +477,14 @@
           <div class="connect-1">
             <span>Contact Us</span>
             <div v-for="contact in contactUs" class="img">
-              <a class="img-1" :href="contact.link"
-                ><img :src="contact.img1" alt="link"
+              <a class="img-1" :href="  contact.link"
+                ><img :src="'./' + contact.img1" alt="link"
               /></a>
-              <a class="img-2" :href="contact.link"
-                ><img :src="contact.img2" alt="link"
+              <a class="img-2" :href="  contact.link"
+                ><img :src="'./' + contact.img2" alt="link"
               /></a>
-              <a class="img-3" :href="contact.link"
-                ><img :src="contact.img3" alt=""
+              <a class="img-3" :href="  contact.link"
+                ><img :src="'./' + contact.img3" alt=""
               /></a>
             </div>
           </div>
@@ -493,32 +493,32 @@
             <div class="text">
               <h4>About Us</h4>
               <ul>
-                <li><a href="./pages/FAQ's.html">FAQs</a></li>
-                <li><a
-                  href="https://blog.learnhall.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Blog</a
-                ></li>
-                <li><a href="./pages/FAQ's.html">Reviews</a></li>
+                <li><a href="./Pages/FAQ's.html">FAQs</a></li>
+                <li>
+                  <a
+                    href="https://blog.learnhall.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Blog</a
+                  >
+                </li>
+                <li><a href="./Pages/FAQ's.html">Reviews</a></li>
               </ul>
             </div>
             <div class="text">
               <h4>Learn With Us</h4>
               <ul>
-                <li><a href="./pages/Book a Session.html">Request a Tutor</a></li>
-                <li>
-                  <a href="./pages/Book a Session.html">Learning Resources</a>
-                </li>
+                <li><a href="./Pages/Book-a-Session.html">Request a Tutor</a></li>
+                <li><a href="./Pages/Book-a-Session.html">Learning Resources</a></li>
               </ul>
             </div>
             <div class="text">
               <h4>Work With Us</h4>
               <ul>
                 <li>
-                  <a href="./pages/Become a Tutor.html">Carrers at Learnhall</a>
+                  <a href="./Pages/Become-a-Tutor.html">Carrers at Learnhall</a>
                 </li>
-                <li><a href="./pages/Become a Tutor.html">Apply to Tutor</a></li>
+                <li><a href="./Pages/Become-a-Tutor.html">Apply to Tutor</a></li>
               </ul>
             </div>
           </div>
@@ -559,12 +559,12 @@
   <!--End of Tawk.to Script-->
   </body>
 
-  <script src="./javascript/JQuery.js"></script>
+  <script src="./Javascript/JQuery.js"></script>
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-  <script src="./javascript/Vue.js"></script>
-  <script src="./javascript/script.js"></script>
-  <script src="./javascript/animations.js"></script>
-  <script src="./javascript/sign-up-for-newsletter.js"></script>
+  <script src="./Javascript/Vue.js"></script>
+  <script src="./Javascript/script.js"></script>
+  <script src="./Javascript/animations.js"></script>
+  <script src="./Javascript/sign-up-for-newsletter.js"></script>
   <script
   type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
