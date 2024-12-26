@@ -13,12 +13,10 @@
     <link rel="stylesheet" href="https://use.typekit.net/xea2kuh.css" />
 
     <!-- Links to Stylesheets -->
+    <link rel="stylesheet" href="../CSS/MediaQuerries.css" />
     <link rel="stylesheet" href="../CSS/Header.css" />
     <link rel="stylesheet" href="../CSS/Footer.css" />
     <link rel="stylesheet" href="../CSS/Book-a-session.css" />
-
-    <!--Links to Mediaquerries-->
-    <link rel="stylesheet" href="../CSS/MediaQuerries.css" />
   </head>
 
   <body>
@@ -96,11 +94,13 @@
                 <a
                   class="nav book-session-header"
                   style="color: #070a13"
-                  href="./Book a Session.html"
+                  href="./Book-a-Session.html"
                   >Book a Session</a
                 >
               </li>
-              <li><a href="Become a Tutor.html">Become a Tuter</a></li>
+              <li>
+                <a href="Become-a-Tutor.html">Become a Tutor</a>
+              </li>
               <li>
                 <a
                   href="https://blog.learnhall.com/"
@@ -277,10 +277,10 @@
           <div class="connect connect-right">
             <span>Let's Connect</span>
             <div v-for="connect in letsConnect" class="img">
-              <a class="img-1" :href="'../' + connect.link"
+              <a class="img-1" :href=" connect.link"
                 ><img :src="'../' + connect.img1" alt="link"
               /></a>
-              <a class="img-2" :href="'../' + connect.link"
+              <a class="img-2" :href=" connect.link"
                 ><img :src="'../' + connect.img2" alt="link"
               /></a>
             </div>
@@ -289,13 +289,13 @@
           <div class="connect-1">
             <span>Contact Us</span>
             <div v-for="contact in contactUs" class="img">
-              <a class="img-1" :href="'../' + contact.link"
+              <a class="img-1" :href=" contact.link"
                 ><img :src="'../' + contact.img1" alt="link"
               /></a>
-              <a class="img-2" :href="'../' + contact.link"
+              <a class="img-2" :href=" contact.link"
                 ><img :src="'../' + contact.img2" alt="link"
               /></a>
-              <a class="img-3" :href="'../' + contact.link"
+              <a class="img-3" :href=" contact.link"
                 ><img :src="'../' + contact.img3" alt=""
               /></a>
             </div>

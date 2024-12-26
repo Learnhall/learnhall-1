@@ -76,6 +76,20 @@ $(function () {
     $(showText).css("display", "block");
   });
 
+  /* See less function */
+  $(".see-less").click(function () {
+    reload(); // Optional, depending on your implementation.
+
+    const currentTextId = $(this).attr("id");
+    const parentElement = $(this).closest(".text");
+
+    const showText = parentElement.find(`.review-text`);
+    const hideText = parentElement.find(`.review-text-1`);
+
+    hideText.css("display", "none");
+    showText.css("display", "block");
+  });
+
   $window = $(window);
   $(".content").each(function () {
     a = $(this).attr("id");
@@ -105,69 +119,6 @@ $(function () {
         $(a).hide();
       }
     }
-  });
-
-  /* slider function */
-  function show_content() {
-    if ($window.width() >= 960) {
-      (nextId = 2), (previouseId = -1);
-    } else if ($window.width() >= 576) {
-      (nextId = 1), (previouseId = -1);
-    } else if ($window.width() >= 0) {
-      (nextId = -0), (previouseId = -1);
-    }
-    return nextId, previouseId;
-  }
-  show_content();
-
-  $(".next").click(function () {
-    reload();
-
-    // Ensures nextId does not exceed 9
-    if (nextId > 8) {
-      return;
-    }
-
-    $(".content").each(function () {
-      a = $(this).attr("id");
-
-      if (a == previouseId) {
-        a = "#" + a;
-        $(a).hide();
-      } else if (a == nextId) {
-        a = "#" + a;
-        $(a).show();
-      }
-    });
-    return nextId++, previouseId++;
-  });
-
-  $(".previous").click(function () {
-    reload();
-
-    if (previouseId <= -1) {
-      return;
-    }
-
-    nextId--, previouseId--;
-
-    $(".content").each(function () {
-      a = $(this).attr("id");
-
-      if (previouseId < -1) {
-        return show_content();
-      } else if (previouseId >= 0) {
-        if (a == nextId) {
-          a = "#" + a;
-          $(a).hide();
-        } else if (a == previouseId) {
-          a = "#" + a;
-          $(a).show();
-        }
-      }
-    });
-
-    return nextId, previouseId;
   });
 
   /* show and hide FAQ's */
