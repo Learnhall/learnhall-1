@@ -27,30 +27,6 @@ function handleChooseUsScroll() {
   });
 }
 
-// Handle animations for the parent-reviews section
-function handleParentReviewsScroll() {
-  const textElements = document.querySelectorAll(
-    ".parent-reviews .text-1 h2, .parent-reviews .text-1 p"
-  );
-  const reviewContents = document.querySelectorAll(".parent-reviews .content");
-
-  // Animate text elements only when they come into the viewport
-  textElements.forEach((el, index) => {
-    if (isInViewport(el) && !el.classList.contains("visible")) {
-      el.classList.add("visible");
-      el.style.animationDelay = `${index * 0.3}s`;
-    }
-  });
-
-  // Animate review contents only when they come into the viewport
-  reviewContents.forEach((content, index) => {
-    if (isInViewport(content) && !content.classList.contains("visible")) {
-      content.classList.add("visible");
-      content.style.setProperty("--review-index", index);
-    }
-  });
-}
-
 // Handle animations for the video-testimonial section
 function handleVideoScroll() {
   const section = document.querySelector(".video-testemonial");
@@ -79,6 +55,5 @@ function handleServiceWorksScroll() {
 
 // Attach the scroll event listeners for all sections
 window.addEventListener("scroll", handleChooseUsScroll);
-window.addEventListener("scroll", handleParentReviewsScroll);
 window.addEventListener("scroll", handleVideoScroll);
 window.addEventListener("scroll", handleServiceWorksScroll);

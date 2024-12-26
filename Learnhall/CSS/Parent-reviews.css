@@ -17,7 +17,7 @@
 .parent-reviews .content.visible {
   animation: fadeInUp 0.8s ease forwards;
   animation-delay: calc(
-    var(--review-index) * 0.7s + 0.9s
+    var(--review-index) * 0.4s + 0.3s
   ); /* Staggered delay */
 }
 
@@ -83,6 +83,12 @@
   height: max-content;
 }
 .slider .text .read-more {
+  color: #233c7e;
+  display: flex;
+  flex-wrap: wrap;
+  display: inline-block;
+}
+.slider .text .see-less {
   color: #233c7e;
   display: flex;
   flex-wrap: wrap;
