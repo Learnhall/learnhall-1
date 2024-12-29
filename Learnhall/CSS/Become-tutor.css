@@ -305,6 +305,19 @@ main {
   backdrop-filter: blur(2.5px);
 }
 
+.error-background {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  background: rgba(7, 10, 19, 0.2);
+  backdrop-filter: blur(2.5px);
+}
+
 section.none {
   display: none;
 }
@@ -363,6 +376,10 @@ section.none {
   text-align: center;
   color: #070a13;
   margin-bottom: 30px;
+}
+
+.error-background .thank-you-section h3 {
+  color: red;
 }
 
 .thank-you-section p {
