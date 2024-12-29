@@ -30,6 +30,12 @@ $(".become-a-tutor-form").submit(function (event) {
   isValid &= validateField("#about-yourself-1", /^.+$/, "Subject is required."); // Allows any non-empty value
   isValid &= validateField("#experience-1", /^.+$/, "Experience is required."); // Allows any non-empty value
 
+  // Stop the form submission if the form is invalid
+  if (!isValid) {
+    alert("Please enter valid input");
+    return;
+  }
+
   // Proceed with AJAX request to submit form
   $.ajax({
     url: form.attr("action"), // Endpoint to send data

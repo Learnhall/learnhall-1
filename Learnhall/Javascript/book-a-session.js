@@ -29,6 +29,12 @@ $(".book-a-session-form").submit(function (event) {
   isValid &= validateField("#student-grade", /^.+$/, "Grade is required."); // Allows any non-empty value
   isValid &= validateField("#student-subject", /^.+$/, "Subject is required."); // Allows any non-empty value
 
+  // Stop the form submission if the form is invalid
+  if (!isValid) {
+    alert("Please enter valid input");
+    return; // Stop further processing
+  }
+
   // Proceed with AJAX request to submit form
   $.ajax({
     url: form.attr("action"), // Endpoint to send data
@@ -44,6 +50,7 @@ $(".book-a-session-form").submit(function (event) {
       form[0].reset(); // Reset the form after successful submission
     },
     error: function (xhr, textStatus) {
+      console.log(xhr, textStatus);
       if (xhr.status === 200 || textStatus === "error") {
         const blurSectionElement = document.querySelector(
           ".thank-you-background"
