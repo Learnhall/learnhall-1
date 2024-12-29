@@ -29,6 +29,13 @@ $(".book-a-session-form").submit(function (event) {
   isValid &= validateField("#student-grade", /^.+$/, "Grade is required."); // Allows any non-empty value
   isValid &= validateField("#student-subject", /^.+$/, "Subject is required."); // Allows any non-empty value
 
+  // Stop the form submission if the form is invalid
+  if (!isValid) {
+    const blurSectionElement = document.querySelector(".error-background");
+    blurSectionElement.classList.remove("none"); // Show the thank-you section
+    return; // Stop further processing
+  }
+
   // Proceed with AJAX request to submit form
   $.ajax({
     url: form.attr("action"), // Endpoint to send data
@@ -57,12 +64,16 @@ $(".book-a-session-form").submit(function (event) {
   });
 });
 
-// Close thank-you message on clicking the close button
+// Close thank-you and error message on clicking the close button
 const closeHamburgerElement = document.querySelector(".close-hamburger img");
-const blurSectionElement = document.querySelector(".thank-you-background");
+const blurSectionElement1 = document.querySelector(".thank-you-background");
+const blurSectionElement2 = document.querySelector(".error-background");
 
-closeHamburgerElement.addEventListener("click", () => {
-  blurSectionElement.classList.add("none"); // Hide the thank-you section
+document.querySelectorAll(".close-hamburger img").forEach((closeElement) => {
+  closeElement.addEventListener("click", () => {
+    document.querySelector(".thank-you-background").classList.add("none");
+    document.querySelector(".error-background").classList.add("none");
+  });
 });
 
 // Field validation function
