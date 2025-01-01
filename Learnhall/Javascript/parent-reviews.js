@@ -1,8 +1,20 @@
 $(function () {
-  let useFastDelay = false; // Tracks whether to use fast delay for animations
-  let context;
-  let nextId, previouseId, maxId;
+  $("#radio-1").prop("checked", true);
 
+  let context;
+  const maxId = 8; // Total number of reviews
+  let reviewsPerGroup = 3; // Default group size for large screens
+  let currentGroupIndex = 0; // Track the current group index
+  let useFastDelay = false; // Tracks whether to use fast delay for animations
+
+  // Define boundaries for each button (button1 shows reviews 0,1,2; button2 shows 3,4,5; etc.)
+  const buttonRanges = [
+    { start: 0, end: 2 }, // Button 1: reviews 0, 1, 2
+    { start: 3, end: 5 }, // Button 2: reviews 3, 4, 5
+    { start: 6, end: 8 }, // Button 3: reviews 6, 7, 8
+  ];
+
+  // Function to determine screen size context
   function determineContext() {
     const width = $(window).width();
     if (width >= 1440) return "large-desktop";
@@ -11,83 +23,97 @@ $(function () {
     return "mobile";
   }
 
-  function reload() {
+  // Function to calculate reviews per group based on the screen context
+  function calculateReviewsPerGroup() {
     context = determineContext();
 
+    if (context === "large-desktop" || context === "desktop") {
+      reviewsPerGroup = 3;
+    } else if (context === "tablet") {
+      reviewsPerGroup = 2; // Randomizer when showing 2 reviews
+    } else {
+      reviewsPerGroup = 1; // Randomizer for mobile when showing 1 review
+    }
+  }
+
+  // Function to randomize the review selection
+  function randomizeReviews() {
+    const startIndex = buttonRanges[currentGroupIndex].start;
+    const endIndex = buttonRanges[currentGroupIndex].end;
+
+    let reviewsToShow = [];
+    if (reviewsPerGroup === 3) {
+      let randomizedIds = [];
+
+      // Select reviews within the specified range for the current button
+      for (let i = startIndex; i <= endIndex; i++) {
+        randomizedIds.push(i);
+      }
+
+      // Randomize reviews within the selected range
+      randomizedIds = shuffle(randomizedIds);
+      reviewsToShow = randomizedIds.slice(0, 3); // Ensure 3 reviews are selected per button
+    } else if (reviewsPerGroup === 2 || reviewsPerGroup === 1) {
+      // Handle mobile and tablet views (1 or 2 reviews)
+      let randomizedIds = [];
+      for (let i = startIndex; i <= endIndex; i++) {
+        randomizedIds.push(i);
+      }
+
+      randomizedIds = shuffle(randomizedIds);
+      reviewsToShow = randomizedIds.slice(0, reviewsPerGroup);
+    }
+
+    // Show the selected reviews and apply animation with individual delays
+    $(".content").each(function () {
+      const currentId = parseInt($(this).attr("id"));
+
+      if (reviewsToShow.includes(currentId)) {
+        $(this)
+          .show()
+          .css("opacity", "1")
+          .addClass("visible")
+          .get(0).style.animationDelay = useFastDelay
+          ? `${currentId * 0.0}s`
+          : `calc(${currentId * 0.4}s + 0.3s)`; // Individual delay for animation
+      } else {
+        $(this).css("opacity", "0").hide().removeClass("visible");
+      }
+    });
+  }
+
+  // Function to reload the content on page resize or context change
+  function reload() {
+    calculateReviewsPerGroup();
     $(window).resize(function () {
       const newContext = determineContext();
-
       if (newContext !== context) {
-        context = newContext;
-        location.reload();
+        calculateReviewsPerGroup();
+        randomizeReviews();
       }
     });
   }
 
   reload();
 
-  function show_content() {
-    if ($(window).width() >= 960) {
-      nextId = 2;
-      previouseId = 0;
-      maxId = 8; // Adjust based on content
-    } else if ($(window).width() >= 576) {
-      nextId = 1;
-      previouseId = 0;
-      maxId = 8; // Adjust based on content
-    } else {
-      nextId = 0;
-      previouseId = 0;
-      maxId = 8; // Adjust based on content
+  // Button click event for selecting reviews per group and applying randomization
+  $(".radio-buttons .custom-radio-btn input").click(function () {
+    const radioIndex = $(".radio-buttons .custom-radio-btn input").index(this);
+    currentGroupIndex = radioIndex;
+    useFastDelay = true; // Enable fast delay for animations
+    randomizeReviews();
+  });
+
+  // Helper function to shuffle the review IDs array
+  function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]]; // Swap
     }
+    return array;
   }
 
-  show_content();
-
-  $(".next").click(function () {
-    if (nextId >= maxId - 1) return;
-
-    useFastDelay = true; // Enable fast delay for animations
-
-    $(".content").each(function () {
-      const currentId = parseInt($(this).attr("id"));
-
-      if (currentId === previouseId) {
-        $(this).css("opacity", "0").hide().removeClass("visible");
-      }
-
-      if (currentId === nextId + 1) {
-        $(this).show().css("opacity", "1").addClass("visible");
-        $(this).get(0).style.animationDelay = `${(nextId + 1) * 0.0}s`;
-      }
-    });
-
-    previouseId++;
-    nextId++;
-  });
-
-  $(".previous").click(function () {
-    if (previouseId <= 0) return;
-
-    useFastDelay = true; // Enable fast delay for animations
-
-    $(".content").each(function () {
-      const currentId = parseInt($(this).attr("id"));
-
-      if (currentId === nextId) {
-        $(this).css("opacity", "0").hide().removeClass("visible");
-      }
-
-      if (currentId === previouseId - 1) {
-        $(this).show().css("opacity", "1").addClass("visible");
-        $(this).get(0).style.animationDelay = `${(previouseId - 1) * 0.0}s`;
-      }
-    });
-
-    previouseId--;
-    nextId--;
-  });
-
+  // Function to check if an element is in the viewport for animation triggers
   function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return (
@@ -99,6 +125,7 @@ $(function () {
     );
   }
 
+  // Function to handle scroll events for when content becomes visible
   function handleParentReviewsScroll() {
     const textElements = document.querySelectorAll(
       ".parent-reviews .text-1 h2, .parent-reviews .text-1 p"
