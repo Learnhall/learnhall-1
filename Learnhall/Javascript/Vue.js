@@ -135,9 +135,9 @@ var parents_reviews = [
     img: "./images/parent-mdl.jpg",
     name: "Mandy R.",
     num_of_stars: 5,
-    text: "Mike tutored my 17 year old with math and English. He is extreamly knoledgable, personable, engaging and funny too! Mike took time to understand the learning style that worked best for ",
+    text: "Mike tutored my 17 year old with math and English. He is extreamly knoledgable, personable, engaging and funny too! Mike took time to understand the learning style that worked best ",
     more_text:
-      "my daughter and where she was missing information so that he could help course correct and guide her to the next level. My daughter takes her education seriously and Mike was able to help her reach her goal of achieving straight A's. I highly recommend Mike as a tutor. Thank you Mike, you saved the semester!.",
+      "for my daughter and where she was missing information so that he could help course correct and guide her to the next level. My daughter takes her education seriously and Mike was able to help her reach her goal of achieving straight A's. I highly recommend Mike as a tutor. Thank you Mike, you saved the semester!.",
   },
   {
     Id: "06",
