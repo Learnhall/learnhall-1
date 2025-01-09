@@ -19,13 +19,22 @@ $(function () {
     $(window).resize(function () {
       //refresh the page
       if ($window.width() >= 1440 && context != "large-desktop") {
-        location.reload();
+        $(".hamburger-menu-open").css("display", "none");
+        $(".hamburger-menu-close").css("display", "none");
+        $(".nav-bar-hamburger-menu").css("display", "none");
       } else if ($window.width() >= 960 && context != "mobile") {
+        $(".hamburger-menu-open").css("display", "none");
+        $(".hamburger-menu-close").css("display", "none");
+        $(".nav-bar-hamburger-menu").css("display", "none");
         location.reload();
       } else if ($window.width() >= 576 && context != "tablet") {
-        location.reload();
+        $(".hamburger-menu-open").css("display", "flex");
+        $(".hamburger-menu-close").css("display", "none");
+        $(".nav-bar-hamburger-menu").css("display", "none");
       } else if ($window.width() >= 0 && context != "mobile") {
-        location.reload();
+        $(".hamburger-menu-open").css("display", "flex");
+        $(".hamburger-menu-close").css("display", "none");
+        $(".nav-bar-hamburger-menu").css("display", "none");
       }
     });
   }
