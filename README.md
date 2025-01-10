@@ -95,3 +95,49 @@ Learnhall is an online tutoring platform designed to connect students and tutors
 ├── 📂 Video Files 
 │   ├── Index.html  
 ├── 📄 Figma Design     # Link included as a .txt file.
+```
+# Developer Guidelines
+
+## Branching Workflow
+
+1. Create a new branch for every update or feature:
+
+    ```bash
+    git checkout -b feature/faq-update
+    ```
+
+2. Push changes to the branch:
+
+    ```bash
+    git push origin feature/faq-update
+    ```
+
+3. Submit a pull request for review.
+
+4. Merge into the main branch upon approval.
+
+---
+
+## How to Set Up the Project
+
+1. Clone the repository:
+
+    ```bash
+    git clone <repository_url>
+    ```
+
+2. Open the project in your favorite editor.
+
+3. Launch the home page by opening `index.html` in a browser.
+
+---
+
+## Deployment Notes
+
+1. Ensure your Formspree configurations match the desired endpoints.
+
+2. Test AJAX requests for success and error messages.
+
+3. Verify animations work smoothly on modern browsers.
+
+4. Review the `figma-design-link.txt` file for design guidelines.
