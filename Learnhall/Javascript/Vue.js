@@ -134,7 +134,7 @@ var parents_reviews = [
     img: "./images/parent-mdl.jpg",
     name: "Kristina S.",
     num_of_stars: 5,
-    text: "Roxanne is amazing!  She has been helping my 7th grade son with his writing and language arts skills.  Roxanne is incredibly patient and thoughtful in her approach with my son.  My son has really",
+    text: "Roxanne is amazing!  She has been helping my 7th-grade son with his writing and language arts skills.  Roxanne is incredibly patient and thoughtful in her approach with my son.  My son has really",
     more_text:
       "struggled with writer's block and also has a disorder that affects his handwriting.  With Roxanne's help, my son recently completed an essay assignment and received a good grade.  I am incredibly happy with Roxanne.  She's flexible, friendly, and knowledgable.  I highly recommend Roxanne and Learnhall!",
   },
@@ -147,7 +147,7 @@ var parents_reviews = [
     num_of_stars: 5,
     text: "Me and my family had an opportunity where we needed some additional support for my son for tutoring.  I connected with Mike and he got me with a fantastic tutor names Mende. ",
     more_text:
-      "Not only was she able to accurately assess the needs of my son to move forward to next level and be successful, but she also got my son excited about learning.  She is definitely a gifted instructor and I would highly recommend LearnHall to anyone that needs great tutor.",
+      "Not only was she able to accurately assess the needs of my son to move forward to next level and be successful, but she also got my son excited about learning.  She is definitely a gifted instructor and I would highly recommend LearnHall to anyone who needs a great tutor.",
   },
   {
     Id: "07",
@@ -156,9 +156,9 @@ var parents_reviews = [
     img: "./images/parent-mdl.jpg",
     name: "Katie R.",
     num_of_stars: 5,
-    text: "After watching my son struggle with his Pre Calc class, we decided to look for a Tutor, I found the Learning Hall on line and after reading the reviews called and set up an initial session. After",
+    text: "After watching my son struggle with his Pre-Calc class, we decided to look for a tutor. I found LearnHall online, and after reading the reviews, I called and set up an initial session. ",
     more_text:
-      "the first session with a tutor my son was able to understand the concepts they were working on in class and his interest in the subject was renewed. My only wish was that we would have started sooner! The owner and tutors have been so great about working with our crazy busy schedule and working within our budget, cannot say enough great things about them! Would highly recommend them to anyone struggling!",
+      "After the first session with a tutor, my son was able to understand the concepts they were working on in class, and his interest in the subject was renewed. My only wish is that we had started sooner! The owner and tutors have been so great about working with our busy schedule and within our budget—I can't say enough great things about them! I would highly recommend them to anyone struggling.",
   },
 
   {
@@ -168,9 +168,9 @@ var parents_reviews = [
     img: "./images/parent-mdl.jpg",
     name: "Bill D.",
     num_of_stars: 5,
-    text: "Mike has been helping our son with 7th grade advanced math.  He does an outstanding job and is worthy of our strongest possible recommendation.  Not only does he work well with our ",
+    text: "Mike has been helping our son with 7th-grade advanced math.  He does an outstanding job and is worthy of our strongest possible recommendation.  Not only does he work well with our ",
     more_text:
-      "son on the lesson content, but also reinforces things like writing neatly, being organized, and showing work steps.  He is an enthusiastic advocate for learning in general, helping my son to see the long term value of dedicating himself to doing well in school.",
+      "son on the lesson content, but also reinforces things like writing neatly, being organized, and showing work steps.  He is an enthusiastic advocate for learning in general, helping my son to see the long-term value of dedicating himself to doing well in school.",
   },
 ];
 
