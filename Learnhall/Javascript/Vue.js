@@ -15,7 +15,7 @@ var components = [
     img1: "./images/brown-circle.png",
     img2: "./images/star.png",
     title: "Your Future",
-    text: "We share knoledge that can help in all areas of life, not just the subject's we are focusing on.",
+    text: "We share knowledge that can help in all areas of life, not just the subjects we are focusing on.",
   },
   {
     img1: "./images/dark-circle.png",
@@ -30,13 +30,13 @@ var steps = [
     img1: "./images/orange-circle.png",
     img2: "./images/1.png",
     title: "Step One",
-    text: "Inquire about our tutoring services by filling-out and submitting the 'Book a Session' form.",
+    text: "Inquire about our tutoring services by filling out and submitting the 'Book a Session' form.",
   },
   {
     img1: "./images/blue-circle.png",
     img2: "./images/2.png",
     title: "Step Two",
-    text: "Within 24 hours an advisor will contact you to go over the student's tutoring goals & needs.",
+    text: "Within 24 hours an advisor will contact you to go over the student's tutoring goals and needs.",
   },
   {
     img1: "./images/brown-circle.png",
@@ -81,7 +81,7 @@ var parents_reviews = [
     img: "./images/parent-mdl.jpg",
     name: "Kimberly K.",
     num_of_stars: 5,
-    text: "Thanks to the encouraging and fun atmosphere Mike creates around math, my kid has gone from absolute dread and tears to believing in himself. I never thought I’d see him laughing and cheering ",
+    text: "Thanks to the encouraging and fun atmosphere Mike creates around Math, my kid has gone from absolute dread and tears to believing in himself. I never thought I’d see him laughing and cheering ",
     more_text: "while doing algebra!",
   },
   {
@@ -91,8 +91,8 @@ var parents_reviews = [
     img: "./images/parent-mdl.jpg",
     name: "Rachel F.",
     num_of_stars: 5,
-    text: "My daughter loves working with Vishnu. My daughter will be so confused about her math and then come home from a tutoring session with Vishnu and actually be excited about it. She even ",
-    more_text: "got an A on her last exam and asked us to frame it.",
+    text: "My daughter loves working with Vishnu. My daughter will be so confused about her Math and then come home from a tutoring session with Vishnu and actually be excited about it. She even ",
+    more_text: "received an A on her last exam and asked us to frame it.",
   },
   {
     Id: "02",
@@ -103,7 +103,7 @@ var parents_reviews = [
     num_of_stars: 5,
     text: "Learnhall (and tutor Mark) has helped my son find academic success and confidence in Geometry and Algebra 2 over the last two years. We all love Mark! Not only is he extremely ",
     more_text:
-      "professional and good at what he does, but his attitude is always friendly, encouraging and supportive. Five stars!",
+      "professional and good at what he does, but his attitude is always friendly, encouraging, and supportive. Five stars!",
   },
   {
     Id: "03",
@@ -134,9 +134,9 @@ var parents_reviews = [
     img: "./images/parent-mdl.jpg",
     name: "Kristina S.",
     num_of_stars: 5,
-    text: "Roxanne is amazing!  She has been helping my 7th-grade son with his writing and language arts skills.  Roxanne is incredibly patient and thoughtful in her approach with my son.  My son has really",
+    text: "Roxanne is amazing! She has been helping my 7th-grade son with his writing and language arts skills. Roxanne is incredibly patient and thoughtful in her approach with my son. My son has really",
     more_text:
-      "struggled with writer's block and also has a disorder that affects his handwriting.  With Roxanne's help, my son recently completed an essay assignment and received a good grade.  I am incredibly happy with Roxanne.  She's flexible, friendly, and knowledgable.  I highly recommend Roxanne and Learnhall!",
+      "struggled with writer's block and also has a disorder that affects his handwriting. With Roxanne's help, my son recently completed an essay assignment and received a good grade. I am incredibly happy with Roxanne. She's flexible, friendly, and knowledgeable. I highly recommend Roxanne and Learnhall!",
   },
   {
     Id: "06",
@@ -145,9 +145,9 @@ var parents_reviews = [
     img: "./images/parent-mdl.jpg",
     name: "Chris F.",
     num_of_stars: 5,
-    text: "Me and my family had an opportunity where we needed some additional support for my son for tutoring.  I connected with Mike and he got me with a fantastic tutor names Mende. ",
+    text: "Me and my family had an opportunity where we needed some additional support for my son for tutoring. I connected with Mike and he got me with a fantastic tutor named Mende.",
     more_text:
-      "Not only was she able to accurately assess the needs of my son to move forward to next level and be successful, but she also got my son excited about learning.  She is definitely a gifted instructor and I would highly recommend LearnHall to anyone who needs a great tutor.",
+      "Not only was she able to accurately assess the needs of my son to move forward to the next level and be successful, but she also got my son excited about learning. She is definitely a gifted instructor and I would highly recommend Learnhall to anyone who needs a great tutor.",
   },
   {
     Id: "07",
@@ -156,11 +156,10 @@ var parents_reviews = [
     img: "./images/parent-mdl.jpg",
     name: "Katie R.",
     num_of_stars: 5,
-    text: "After watching my son struggle with his Pre-Calc class, we decided to look for a tutor. I found LearnHall online, and after reading the reviews, I called and set up an initial session. ",
+    text: "After watching my son struggle with his Pre-Calc class, we decided to look for a tutor. I found Learnhall online, and after reading the reviews, I called and set up an initial session.",
     more_text:
       "After the first session with a tutor, my son was able to understand the concepts they were working on in class, and his interest in the subject was renewed. My only wish is that we had started sooner! The owner and tutors have been so great about working with our busy schedule and within our budget—I can't say enough great things about them! I would highly recommend them to anyone struggling.",
   },
-
   {
     Id: "08",
     reviewId: 8,
@@ -179,32 +178,32 @@ var FAQs = [
     id: "a",
     question: "How soon can I hire a tutor from Learnhall?",
     answer:
-      "You can hire a tutor immediately by messaging us on here (on the chatbot or the inquiry form) or by emailing us at info@learnhall.com.  You can also call us at 503.342.7214 as we always strive to serve the needs of each student/family by providing white-glove service.",
+      "You can hire a tutor immediately by messaging us here (on the chatbot or the inquiry form) or by emailing us at info@learnhall.com. You can also call us at 503-342-7214, as we always strive to serve the needs of each student/family by providing white-glove service.",
   },
   {
     id: "b",
     question: "How much does Learnhall charge?",
     answer:
-      "We are extremely competitive in this market in terms of cost, especially when considering that all of our tutors are well-vetted college students or graduates (with some MS grads and PhDs as well) and are experts at the subjects they tutor.  And we are flexible as well!  It doesn't hurt to ask us what we can reasonably do in terms of pricing as we love tutoring and we don't like to lose students over price if at all possible.",
+      "We are extremely competitive in this market in terms of cost, especially when considering that all of our tutors are well-vetted college students or graduates (with some MS grads and PhDs as well) and are experts in the subjects they tutor. And we are flexible as well! It doesn't hurt to ask us what we can reasonably do in terms of pricing, as we love tutoring and we don't like to lose students over price if at all possible.",
   },
   {
     id: "c",
     question: "Does Learnhall require long-term contracts?",
     answer:
-      "NO.  Most of our students work with us on a weekly sessions either once, twice, or three times per week (depending on need).  We don't require onerous long-term contracts to engage with us.",
+      "NO. Most of our students work with us on weekly sessions, either once, twice, or three times per week (depending on need). We don't require onerous long-term contracts to engage with us.",
   },
   {
     id: "d",
     question:
       "What subjects and exams can my Learnhall tutor help with (and what else can they help with)?",
     answer:
-      "We can help with any and all subjects and with any and all exams.  These can be for young people or adults.  Exams that we tutor include the GED, the SAT, the ACT, the GRE, the LSAT, the GMAT, the MCAT, the TOEIC, the TOEFL, the IELTS, etc.  Subjects that we tutor include all levels of Math, Science, History, and English (even through college).  We can also help students write their college application essays or any other essay.",
+      "We can help with any and all subjects and with any and all exams. These can be for young people or adults. Exams that we tutor include the GED, the SAT, the ACT, the GRE, the LSAT, the GMAT, the MCAT, the TOEIC, the TOEFL, the IELTS, etc. Subjects that we tutor include all levels of Math, Science, History, and English (even through college). We can also help students write their college application essays or any other essay.",
   },
   {
     id: "e",
     question: "Will my tutor meet me in person or will sessions be online?",
     answer:
-      "It's up to you.  It's more costly for in-person sessions for obvious reasons, yet we have no preference in terms of whether sessions are online or in-person.  For in-person sessions, we always prefer to meet at your residence or a local library (or at a quiet study room somewhere).",
+      "It's up to you. It's more costly for in-person sessions for obvious reasons, yet we have no preference in terms of whether sessions are online or in-person. For in-person sessions, we always prefer to meet at your residence or a local library (or at a quiet study room somewhere).",
   },
   {
     id: "f",
