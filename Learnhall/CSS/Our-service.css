@@ -92,7 +92,7 @@
 /**********************
 * large desktop layout*
 **********************/
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1441px) {
   .service-works {
     height: 794px;
   }
@@ -193,7 +193,7 @@
 /**********************
 **** Desktop layout****
 **********************/
-@media only screen and (min-width: 960px) and (max-width: 1440px) {
+@media only screen and (min-width: 960px) and (max-width: 1441px) {
   .service-works {
     height: 700px;
   }
