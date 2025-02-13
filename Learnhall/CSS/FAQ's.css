@@ -65,7 +65,7 @@ footer {
 /**********************
 * large desktop layout*
 **********************/
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1441px) {
   .FQ {
     padding-bottom: 60px;
   }
@@ -133,7 +133,7 @@ footer {
 /**********************
 **** Desktop layout****
 **********************/
-@media only screen and (min-width: 960px) and (max-width: 1440px) {
+@media only screen and (min-width: 960px) and (max-width: 1441px) {
   .FQ {
     padding-bottom: 55px;
   }
@@ -285,7 +285,7 @@ footer {
     border-radius: 5px;
   }
   section .FAQ h4 {
-    width: 80%;
+    width: 75%;
     margin-left: 12px;
     margin-top: 20px;
     font-weight: 700;
