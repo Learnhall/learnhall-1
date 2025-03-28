@@ -92,6 +92,12 @@ footer .copywrite .right {
   display: flex;
   justify-content: right;
 }
+footer .copywrite .right a {
+  text-decoration: none;
+}
+footer .copywrite .right a:hover {
+  text-decoration: underline;
+}
 footer .email {
   display: flex;
   justify-content: end;
@@ -535,6 +541,7 @@ footer .email .error-message {
     padding-top: 5px;
     position: absolute;
     right: 0;
+    text-decoration: none;
   }
   footer .copywrite span {
     height: 23px;
