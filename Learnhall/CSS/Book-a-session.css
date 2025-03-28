@@ -163,7 +163,9 @@ main {
   text-decoration: none;
   color: #070a13;
 }
-
+.book-session-contact a:hover {
+  background: rgba(21, 33, 61, 0.137);
+}
 .phone-card {
   margin-bottom: 10px;
 }
