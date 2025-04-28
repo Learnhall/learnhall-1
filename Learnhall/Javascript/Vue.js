@@ -63,7 +63,7 @@ var Contact_Us = [
   {
     img1: "./images/white-circle.png",
     img2: "./images/phone-blue.png",
-    link: "tel:503-342-7214",
+    link: "tel:+1503-342-7214",
   },
   {
     img1: "./images/white-circle.png",

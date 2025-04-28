@@ -4,23 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Favcon image and text -->
-    <link rel="icon" href="../images/Logo.png" type="image/png" />
+  
     <title>Learnhall | FAQ's</title>
-
-    <!-- font link -->
+    <meta name="description" content="Find answers to frequently asked questions about Learnhall's tutoring services, how to book a session, and how to become a tutor." />
+  
+    <link rel="icon" href="../images/Logo.png" type="image/png" />
     <link rel="stylesheet" href="https://use.typekit.net/xea2kuh.css" />
-
-    <!-- Links to Stylesheets -->
-    <link rel="stylesheet" href="../CSS/MediaQuerries.css" />
+  
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="../CSS/Header.css" />
     <link rel="stylesheet" href="../CSS/Footer.css" />
     <link rel="stylesheet" href="../CSS/FAQ's.css" />
-
-    <!--Links to Mediaquerries-->
     <link rel="stylesheet" href="../CSS/MediaQuerries.css" />
   </head>
+  
 
   <body>
     <main id="App">
@@ -60,7 +57,8 @@
                 </li> -->
                 <li>
                   <img src="../images/contact.png" alt="phone-icon" />
-                  <span><a href="tel:503-342-7214">503-342-7214</a></span>
+                  <span><a href="tel:+1503-342-7214">503-342-7214</a>
+                  </span>
                 </li>
               </ul>
             </div>
@@ -288,4 +286,29 @@
     type="text/javascript"
     src="https://embed.tawk.to/5dcd85a143be710e1d1d53da/default"
   ></script>
+      <!-- JSON-LD Structured Data for FAQ -->
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How do I book a session?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can book a session by clicking on the 'Book a Session' link at the top of the page and following the prompts."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I become a tutor?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Click on 'Become a Tutor' and fill out the application form to apply as a tutor at Learnhall."
+              }
+            }
+          ]
+        }
+        </script>
 </html>
