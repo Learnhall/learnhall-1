@@ -1,6 +1,4 @@
 $(".become-a-tutor-form").submit(function (event) {
-  event.preventDefault(); // Prevent default form submission behavior
-
   var form = $(this);
   var isValid = true;
 
@@ -34,35 +32,47 @@ $(".become-a-tutor-form").submit(function (event) {
   if (!isValid) {
     const blurSectionElement = document.querySelector(".error-background");
     blurSectionElement.classList.remove("none"); // Show the thank-you section
+    event.preventDefault(); // Prevent default form submission behavior
     return; // Stop further processing
   }
 
-  // Proceed with AJAX request to submit form
-  $.ajax({
-    url: form.attr("action"), // Endpoint to send data
-    type: form.attr("method"), // Request type (GET/POST)
-    data: form.serialize(), // Serialize form data for submission
-    success: function (response) {
-      // Show thank-you message and blur background
-      const blurSectionElement = document.querySelector(
-        ".thank-you-background"
-      );
-      blurSectionElement.classList.remove("none"); // Show the thank-you section
+  // Honeypot field check
+  if ($("#_gotcha").val().trim() !== "") {
+    event.preventDefault(); // Prevent default form submission behavior
+    return; // Detected bot/spam submission, silently stop
+  } else {
+    // Let Formspree handle the submission, then clear form after a delay
+    setTimeout(() => {
+      form.reset();
+    }, 100); // slight delay to let Formspree grab the data
+  }
 
-      form[0].reset(); // Reset the form after successful submission
-    },
-    error: function (xhr, textStatus) {
-      if (xhr.status === 200 || textStatus === "error") {
-        const blurSectionElement = document.querySelector(
-          ".thank-you-background"
-        );
-        blurSectionElement.classList.remove("none"); // Show the thank-you section
-        form[0].reset();
-      } else {
-        alert("There was an error processing your request. Please try again.");
-      }
-    },
-  });
+  // // Proceed with AJAX request to submit form
+  // $.ajax({
+  //   url: form.attr("action"), // Endpoint to send data
+  //   type: form.attr("method"), // Request type (GET/POST)
+  //   data: form.serialize(), // Serialize form data for submission
+  //   success: function (response) {
+  //     // Show thank-you message and blur background
+  //     const blurSectionElement = document.querySelector(
+  //       ".thank-you-background"
+  //     );
+  //     blurSectionElement.classList.remove("none"); // Show the thank-you section
+
+  //     form[0].reset(); // Reset the form after successful submission
+  //   },
+  //   error: function (xhr, textStatus) {
+  //     if (xhr.status === 200 || textStatus === "error") {
+  //       const blurSectionElement = document.querySelector(
+  //         ".thank-you-background"
+  //       );
+  //       blurSectionElement.classList.remove("none"); // Show the thank-you section
+  //       form[0].reset();
+  //     } else {
+  //       alert("There was an error processing your request. Please try again.");
+  //     }
+  //   },
+  // });
 });
 
 // Close thank-you and error message on clicking the close button
