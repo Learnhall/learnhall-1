@@ -5,6 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!--SEO: LocalBusiness structured data for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Learnhall",
+        "url": "https://www.learnhall.com",
+        "logo": "https://www.learnhall.com/images/Logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-503-342-7214",
+          "contactType": "Customer Service",
+          "areaServed": "Worldwide",
+          "availableLanguage": "English"
+        },
+        "sameAs": [
+          "https://www.facebook.com/learnhalltutoring/",
+          "https://www.instagram.com/learnhalltutoring/",
+          "https://www.linkedin.com/company/learnhall"
+        ]
+      }
+    </script>
+
+    <!-- SEO: Allow indexing and set canonical URL -->
+    <meta name="robots" content="noindex, follow" />
+    <link
+      rel="canonical"
+      href="https://learnhall.com/pages/Book-a-Session.html"
+    />
+
+    <!-- SEO: Meta Tags -->
     <title>Learnhall | Book a Tutoring Session</title>
     <meta
       name="description"
@@ -15,15 +46,8 @@
       content="book a tutoring session, online tutoring, Learnhall tutors, education, student help, personalized tutoring"
     />
     <meta name="author" content="Learnhall" />
-    <link
-      rel="canonical"
-      href="https://learnhall.com/pages/Book-a-Session.html"
-    />
 
-    <!-- Favcon image and text -->
-    <link rel="icon" href="../images/Logo.png" type="image/png" />
-
-    <!-- Open Graph / Facebook -->
+    <!-- SEO: Social Meta Tags for Facebook / Open Graph -->
     <meta property="og:title" content="Book a Session | Learnhall" />
     <meta
       property="og:description"
@@ -36,7 +60,7 @@
     />
     <meta property="og:type" content="website" />
 
-    <!-- Twitter -->
+    <!-- SEO: Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Book a Session | Learnhall" />
     <meta
@@ -48,8 +72,48 @@
       content="https://learnhall.com/images/Logo.png"
     />
 
+    <!-- Favcon image and text -->
+    <link rel="icon" href="../images/Logo.png" type="image/png" />
+
+    <!-- Preload important scripts -->
+    <link rel="preload" href="../Javascript/JQuery.js" as="script" />
+    <link
+      rel="preload"
+      href="https://unpkg.com/vue@3/dist/vue.global.js"
+      as="script"
+    />
+    <link rel="preload" href="../Javascript/Vue.js" as="script" />
+    <link rel="preload" href="../Javascript/script.js" as="script" />
+    <link rel="preload" href="../Javascript/book-a-session.js" as="script" />
+    <link
+      rel="preload"
+      href="../Javascript/sign-up-for-newsletter.js"
+      as="script"
+    />
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+      as="script"
+    />
+
+    <!-- Preload CSS for better performance -->
+    <link
+      rel="preload"
+      href="https://use.typekit.net/xea2kuh.css"
+      as="style"
+      crossorigin="anonymous"
+    />
+    <link rel="preload" href="../CSS/MediaQuerries.css" as="style" />
+    <link rel="preload" href="../CSS/Header.css" as="style" />
+    <link rel="preload" href="../CSS/Footer.css" as="style" />
+    <link rel="preload" href="../CSS/Book-a-session.css" as="style" />
+
     <!-- Fonts and CSS -->
-    <link rel="stylesheet" href="https://use.typekit.net/xea2kuh.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.typekit.net/xea2kuh.css"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="../CSS/MediaQuerries.css" />
     <link rel="stylesheet" href="../CSS/Header.css" />
     <link rel="stylesheet" href="../CSS/Footer.css" />
@@ -177,6 +241,16 @@
               you about your tutoring needs within 24 business hours.
             </p>
             <div class="book-a-session-inputs">
+              <!-- Honeypot field -->
+              <div style="display: none">
+                <label for="_gotcha">Leave this field blank</label>
+                <input
+                  type="text"
+                  name="_gotcha"
+                  id="_gotcha"
+                  autocomplete="off"
+                />
+              </div>
               <div>
                 <label for="first-name">First Name*</label>
                 <input
@@ -474,41 +548,17 @@
       })();
     </script>
     <!--End of Tawk.to Script-->
-  </body>
 
-  <script src="../Javascript/JQuery.js"></script>
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-  <script src="../Javascript/Vue.js"></script>
-  <script src="../Javascript/script.js"></script>
-  <script src="../Javascript/book-a-session.js"></script>
-  <script src="../Javascript/sign-up-for-newsletter.js"></script>
-  <script
-    type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-  ></script>
-  <script
-    type="text/javascript"
-    src="https://embed.tawk.to/5dcd85a143be710e1d1d53da/default"
-  ></script>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Learnhall",
-      "url": "https://www.learnhall.com",
-      "logo": "https://www.learnhall.com/images/Logo.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-503-342-7214",
-        "contactType": "Customer Service",
-        "areaServed": "Worldwide",
-        "availableLanguage": "English"
-      },
-      "sameAs": [
-        "https://www.facebook.com/learnhalltutoring/",
-        "https://www.instagram.com/learnhalltutoring/",
-        "https://www.linkedin.com/company/learnhall"
-      ]
-    }
-  </script>
+    <!--Other Scripts-->
+    <script src="../Javascript/JQuery.js" defer></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+    <script src="../Javascript/Vue.js" defer></script>
+    <script src="../Javascript/script.js" defer></script>
+    <script src="../Javascript/book-a-session.js" defer></script>
+    <script src="../Javascript/sign-up-for-newsletter.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+      defer
+    ></script>
+  </body>
 </html>
