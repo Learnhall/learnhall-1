@@ -4,21 +4,50 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--SEO: LocalBusiness structured data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Learnhall",
+      "image": "https://www.learnhall.com/images/Logo.png",
+      "description": "Private and online English tutoring for students of all levels. Available internationally.",
+      "telephone": "+1-503-342-7214",
+      "url": "https://www.learnhall.com/",
+      "sameAs": [
+        "https://www.facebook.com/learnhalltutoring/",
+        "https://www.instagram.com/learnhalltutoring/",
+        "https://www.linkedin.com/company/learnhall"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Vancouver",
+        "addressRegion": "WA",
+        "postalCode": "98660",
+        "addressCountry": "US"
+      }
+    }  
+    </script>
+
+    <!-- SEO: Allow indexing and set canonical URL -->
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.learnhall.com/" />
   
-    <!-- SEO Meta Tags -->
+    <!-- SEO: Meta Tags -->
     <title>Learnhall | Expert English Tutors | In-Person & Online Tutoring</title>
     <meta name="description" content="Learnhall offers expert English tutoring tailored to your learning style. Book in-person or online sessions with qualified, passionate tutors." />
     <meta name="keywords" content="English tutoring, online tutoring, private tutoring, English tutor near me, Learnhall, academic support, learn English" />
     <meta name="author" content="Learnhall" />
   
-    <!-- Social Meta Tags for Facebook / Open Graph -->
+    <!-- SEO: Social Meta Tags for Facebook / Open Graph -->
     <meta property="og:title" content="Learnhall | Personalized English Tutoring" />
     <meta property="og:description" content="Book expert in-person or online English tutoring sessions today with Learnhall." />
     <meta property="og:image" content="https://www.learnhall.com/images/Logo.png" />
     <meta property="og:url" content="https://www.learnhall.com/" />
     <meta property="og:type" content="website" />
   
-    <!-- Twitter Meta Tags -->
+    <!-- SEO: Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Learnhall | Personalized English Tutoring" />
     <meta name="twitter:description" content="Book expert English tutoring sessions with passionate tutors—online or in-person." />
@@ -26,23 +55,43 @@
   
     <!-- Favicon -->
     <link rel="icon" href="./images/Logo.png" type="image/png" />
-  
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.learnhall.com/" />
-  
+
+    <!-- Preload important scripts -->
+    <link rel="preload" href="./Javascript/JQuery.js" as="script">
+    <link rel="preload" href="https://unpkg.com/vue@3/dist/vue.global.js" as="script">
+    <link rel="preload" href="./Javascript/Vue.js" as="script">
+    <link rel="preload" href="./Javascript/script.js" as="script">
+    <link rel="preload" href="./Javascript/animations.js" as="script">
+    <link rel="preload" href="./Javascript/parent-reviews.js" as="script">
+    <link rel="preload" href="./Javascript/sign-up-for-newsletter.js" as="script">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" as="script">
+    <link rel="preload" href="https://embed.tawk.to/5dcd85a143be710e1d1d53da/default" as="script">
+
+    <!-- Preload CSS for better performance -->
+    <link rel="preload" href="https://use.typekit.net/xea2kuh.css" as="style">
+    <link rel="preload" href="./CSS/Header.css" as="style">
+    <link rel="preload" href="./CSS/learnhall-info.css" as="style">
+    <link rel="preload" href="./CSS/Choose-us.css" as="style">
+    <link rel="preload" href="./CSS/Our-service.css" as="style">
+    <link rel="preload" href="./CSS/Parent-reviews.css" as="style">
+    <link rel="preload" href="./CSS/Video-testemonial.css" as="style">
+    <link rel="preload" href="./CSS/Become-tutor.css" as="style">
+    <link rel="preload" href="./CSS/Footer.css" as="style">
+    <link rel="preload" href="./CSS/MediaQuerries.css" as="style">
+
     <!-- Font -->
     <link rel="stylesheet" href="https://use.typekit.net/xea2kuh.css" />
-  
-    <!-- CSS -->
-    <link rel="stylesheet" href="./CSS/Header.css" />
-    <link rel="stylesheet" href="./CSS/learnhall-info.css" />
-    <link rel="stylesheet" href="./CSS/Choose-us.css" />
-    <link rel="stylesheet" href="./CSS/Our-service.css" />
-    <link rel="stylesheet" href="./CSS/Parent-reviews.css" />
-    <link rel="stylesheet" href="./CSS/Video-testemonial.css" />
-    <link rel="stylesheet" href="./CSS/Become-tutor.css" />
-    <link rel="stylesheet" href="./CSS/Footer.css" />
-    <link rel="stylesheet" href="./CSS/MediaQuerries.css" />
+
+    <!-- Load CSS -->
+    <link rel="stylesheet" href="./CSS/Header.css">
+    <link rel="stylesheet" href="./CSS/learnhall-info.css">
+    <link rel="stylesheet" href="./CSS/Choose-us.css">
+    <link rel="stylesheet" href="./CSS/Our-service.css">
+    <link rel="stylesheet" href="./CSS/Parent-reviews.css">
+    <link rel="stylesheet" href="./CSS/Video-testemonial.css">
+    <link rel="stylesheet" href="./CSS/Become-tutor.css">
+    <link rel="stylesheet" href="./CSS/Footer.css">
+    <link rel="stylesheet" href="./CSS/MediaQuerries.css">
   </head>
 
   <body>
@@ -566,57 +615,29 @@
         </div>
       </footer>
     </main>
-      <!--Start of Tawk.to Script-->
-  <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/5dcd85a143be710e1d1d53da/default';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-  </script>
-  <!--End of Tawk.to Script-->
-  </body>
 
-  <script src="./Javascript/JQuery.js"></script>
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-  <script src="./Javascript/Vue.js"></script>
-  <script src="./Javascript/script.js"></script>
-  <script src="./Javascript/animations.js"></script>
-  <script src="./Javascript/parent-reviews.js"></script>
-  <script src="./Javascript/sign-up-for-newsletter.js"></script>
-  <script
-  type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-></script>
-<script
-type="text/javascript"
-src="https://embed.tawk.to/5dcd85a143be710e1d1d53da/default"
-></script>
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Learnhall",
-    "image": "https://www.learnhall.com/images/Logo.png",
-    "description": "Private and online English tutoring for students of all levels. Available internationally.",
-    "telephone": "+1-503-342-7214",
-    "url": "https://www.learnhall.com/",
-    "sameAs": [
-      "https://www.facebook.com/learnhalltutoring/",
-      "https://www.instagram.com/learnhalltutoring/",
-      "https://www.linkedin.com/company/learnhall"
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Vancouver",
-      "addressRegion": "WA",
-      "postalCode": "98660",
-      "addressCountry": "US"
-    }
-  }  
-  </script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/5dcd85a143be710e1d1d53da/default';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+      })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+    <!--Other Scripts-->
+    <script src="./Javascript/JQuery.js" defer></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+    <script src="./Javascript/Vue.js" defer></script>
+    <script src="./Javascript/script.js" defer></script>
+    <script src="./Javascript/animations.js" defer></script>
+    <script src="./Javascript/parent-reviews.js" defer></script>
+    <script src="./Javascript/sign-up-for-newsletter.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+  </body>
 </html>
