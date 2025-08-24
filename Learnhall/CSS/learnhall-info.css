@@ -34,18 +34,20 @@
 }
 .brown-image {
   position: absolute;
-  float: right;
+  float: left;
   right: 0;
 }
 .modelbackground-image {
   position: absolute;
   display: block;
+  float: left;
 }
 .model1-image {
   position: absolute;
 }
 .learnhall-info-text {
   position: absolute;
+  display: inline-block;
 }
 .learnhall-info-text .heading {
   font-family: "adobe-garamond-pro", serif;
