@@ -1,0 +1,1314 @@
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/*General styles*/
+p {
+  text-align: justify;
+}
+/* Desktop styles */
+/* INFO SECTION */
+/* Section Wrapper */
+.info-section {
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 1rem;
+  background-color: #FFFCF9;
+}
+
+/* ROW CONTAINER */
+.row-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 5rem 1rem 5rem;
+  box-sizing: border-box;
+}
+
+/* LEFT IMAGE CONTAINER */
+.info-images {
+  flex: 1;
+  max-width: 50%;
+  position: relative;
+  display: flex;
+ /* justify-content: center; For Positioning Image*/ 
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+/* IMAGE STACK */
+.img-stack-info {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.img-stack-info img {
+  position: absolute;
+  width: 100%;   /* Force both to scale with parent width */
+  height: 100%;  /* Maintain aspect ratio of each image */
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* RIGHT TEXT CONTAINER */
+.info-text {
+  flex: 1;
+  max-width: 50%;
+  position: relative;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.sub-text {
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.brown-image {
+  z-index: 0;
+}
+.model1-image {
+  z-index: 1;
+  transform: translate(20px, -20px);
+}
+
+/* DECORATION */
+.decoration {
+  position: absolute;
+  width: 100%;
+  inset: 0; /* shorthand for top:0, right:0, bottom:0, left:0 */
+  pointer-events: none;
+  z-index: 0;
+}
+
+.decoration img {
+  position: absolute;
+  z-index: 100;
+  
+}
+/* Circle positions */
+.orange-circle-1 {
+  top: 8%;
+  left: 95%;
+  width: 120px;
+  height: 120px;
+}
+.orange-circle-2 {
+  top: 90%;
+  left: -5%;
+  width: 200px;
+  height: 200px;
+}
+
+
+/*HISTORY SECTION */
+/* Section Wrapper */
+#App > section.history-section {
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 1rem;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+}
+
+.row-history {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 3rem 5rem 1rem 5rem;
+  margin-bottom: 1rem;
+}
+
+.history-img-cont {
+  flex: 1;
+  width: 50%;
+  position: relative; /* Necesario para posicionar elementos absolutos dentro */
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+
+.img-stack-history {
+  position: relative;
+  width: 100%;
+  max-width: 500px; /* Optional limit for desktop */
+  aspect-ratio: 4 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  overflow: visible; /* ✅ make sure shadow shows */
+  z-index: 0; 
+}
+
+.img-stack-history img {
+  position: absolute;
+  width: 100%;   /* Force both to scale with parent width */
+  height: 100%;  /* Maintain aspect ratio of each image */
+  object-fit: cover;
+  border-radius: 20px;
+
+}
+
+.brown-image-2 {
+  z-index: 0;
+  transform: translate(50px, 80px); 
+}
+
+.model2-image {
+  z-index: 1;
+}
+/* DECORATION */
+.decoration-2 {
+  position: absolute;
+  width: 100%;
+  inset: 0; /* shorthand for top:0, right:0, bottom:0, left:0 */
+  pointer-events: none;
+  z-index: 0;
+}
+.decoration-2 img {
+  position: absolute;
+  z-index: 0;
+  
+}
+/* Circle positions */
+.brown-circle-2 {
+  top: 90%;
+  left: 90%;
+  width: 150px;
+  height: 150px;
+  
+}
+/*Button container*/
+#App > section.learnhall-info-history > div:nth-child(2) {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.history-text-cont {
+  flex: 1;
+  max-width: 100%;
+  padding: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.history-text-cont .heading {
+  font-family: "adobe-garamond-pro", serif;
+  font-size: 2rem;
+  color: #070a13;
+  display: block;
+}
+.headings {
+  font-family: "adobe-garamond-pro", serif;
+  font-size: 2.7rem;
+  color: #070a13;
+  display: block;
+}
+.headings-m {
+  font-family: "adobe-garamond-pro", serif;
+  font-size: 2rem;
+  color: #070a13;
+}
+.headings-white {
+  font-family: "adobe-garamond-pro", serif;
+  font-size: 2.5rem;
+  color: #ffffff;
+  display: block;
+}
+.history-text-cont .sub-text {
+  color: #070a1396;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+.text-p {
+  margin-top: 1rem;
+  line-height: 1.6;
+  font-size: 17px;
+}
+
+.history-text-cont a button {
+  background-color: #FFFBF8;
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.history-text-cont a button:hover {
+  animation: shake 0.5s ease-in-out;
+}
+.history-text-cont button {
+  background-color: #c04c40;
+  border: #c04c40;
+}
+
+
+/*EDUCATIONAL SECTION*/
+
+section.education-section {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 7rem;
+  background-color: #FFFCF9;
+  box-sizing: border-box;
+}
+.row-education {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 6rem 2rem 6rem;
+  margin-bottom: 3rem;
+  align-items: stretch;
+}
+#App > section.education-section > div:nth-child(2) {
+  margin-top: 3.5rem;
+}
+.educational-main-img-cont {
+  flex: 1;
+  width: 50%;
+  position: relative; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 1rem; /* helps prevent right overflow */
+  box-sizing: border-box;
+}
+.img-main-stack-education {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 500px; /* Optional limit for desktop */
+  aspect-ratio: 16 / 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.img-main-stack-education img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  position: relative; 
+}
+
+/*School cards*/
+
+.educational-image-cont {
+  flex: 0 1 auto;             /* no ocupará todo el espacio */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #F4F4F4;
+  border-radius: 30px;
+  padding: 0rem 0rem 1.5rem 0rem;
+  max-width: 500px;           /* mismo ancho máximo que la imagen */
+  margin: 0 auto;    
+}
+
+.img-stack-education {
+  position: relative;
+  width: 100%;       /* ocupar todo el ancho del padre */
+  aspect-ratio: 16/9;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;  /* espacio entre imagen y texto */
+}
+
+.img-stack-education img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+  position: relative; /* ❌ elimina absolute para que no se superponga */
+}
+
+
+.brown-image-left-bottom {
+  max-width: 55%;
+  z-index: 0;
+  transform: translate(-50%, 8%); 
+}
+.brown-image-left-top {
+  max-width: 55%;
+  z-index: 0;
+  transform: translate(-50%, -8%); 
+}
+.brown-image-right-top {
+  max-width: 55%;
+  z-index: 0;
+  transform: translate(166%, -9%); 
+}
+
+.brown-image-right-bottom {
+  max-width: 55%;
+  z-index: 0;
+  transform: translate(50%, 8%); 
+}
+
+.model3-image {
+  z-index: 1;
+  
+}
+.text-card {
+  padding: 0.3rem 0.7rem;
+}
+.text-card-black {
+  font-family: "adobe-garamond-pro", serif;
+  font-size: 1.4rem;
+}
+.text-card-grey {
+  font-size: 1rem;
+  color: #555;
+}
+/* Circle positions */
+.educ-circle-3 {
+  bottom: 135rem; /* anchors from bottom instead of 92% */
+  left: -6.5rem;  /* anchors from right */
+  width: 150px;
+  height: 150px;
+  opacity: 0.9;
+}
+.educ-circle-4 {
+  
+  top: 73%; /* anchors from bottom instead of 92% */
+  left: 92%;  /* anchors from right */
+  width: 160px;
+  height: 160px;
+  opacity: 0.9;
+}
+p {
+  margin-top: 1rem;
+  line-height: 1.6;
+  font-size: 17px;
+}
+.button-cont {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+}
+a button {
+  background-color: #c04c40;
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.text-education {
+  flex: 1;
+  max-width: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+/*SCHOOL SECTION*/
+section.school-section {
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 1rem;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+}
+.row-school {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 6rem 5rem 6rem;
+  
+}
+.row-school-center {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  
+  justify-content: center;
+}
+.school-image-cont {
+  flex: 1;
+  width: 40%;
+  position: relative; 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+}
+.school-text-cont {
+  flex: 1;
+  width: 60%;
+  position: relative; 
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.img-stack-school {
+  position: relative;
+  width: 100%;
+  max-width: 500px; /* Optional limit for desktop */
+  aspect-ratio: 16 / 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.img-stack-school img {
+  position: absolute;
+
+  width: 100%;   /* Force both to scale with parent width */
+  height: 100%;  /* Maintain aspect ratio of each image */
+  object-fit: cover;
+  border-radius: 20px;
+}
+.row-icons{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem 6rem;
+}
+.icon-school-cont {
+  flex: 0 1 calc(50% - 2rem); /* exactly 2 per row */
+  max-width: 350px;           /* prevent stretching */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.icon-stack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.icon-stack img {
+  width: 80px;   /* 👈 control icon size here */
+  height: auto;
+  object-fit: contain;
+}
+
+.brown-image-left {
+  z-index: 0;
+  transform: translate(-20px, -20px); 
+  
+}
+
+.model3-image {
+  z-index: 1;
+  
+}
+/* Circle positions */
+.school-circle-4 {
+  top: 3%;
+  left: 93%;
+  width: 140px;
+  height: 140px;
+}
+.school-circle-5 {
+  top: 88%;
+  left: -3.2%;
+  width: 150px;
+  height: 150px;
+  opacity: 0.9;
+}
+
+.learnhall-info-text-centered {
+  max-width: 80%;
+}
+.center-button-row {
+  justify-content: center;
+}
+
+#App > section.beav-school-section > div:nth-child(3) > div > p {
+  width: 100%;
+}
+
+/* Support Section */
+section.support-section {
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 1rem;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+}
+.row-support {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 6rem 5rem 6rem;
+  
+}
+.row-support-center {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  
+  justify-content: center;
+}
+.support-image-cont {
+  flex: 1;
+  width: 40%;
+  position: relative; 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+}
+.support-text-cont {
+  flex: 1;
+  width: 60%;
+  position: relative; 
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.img-stack-support {
+  position: relative;
+  width: 100%;
+  max-width: 500px; /* Optional limit for desktop */
+  aspect-ratio: 16 / 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.img-stack-support img {
+  position: absolute;
+
+  width: 100%;   /* Force both to scale with parent width */
+  height: 100%;  /* Maintain aspect ratio of each image */
+  object-fit: cover;
+  border-radius: 20px;
+}
+.row-icons{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem 6rem;
+}
+.icon-support-cont {
+  flex: 0 1 calc(50% - 2rem); /* exactly 2 per row */
+  max-width: 350px;           /* prevent stretching */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #F4F4F4;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.icon-stack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.icon-stack img {
+  width: 120px;   /* 👈 control icon size here */
+  height: auto;
+  object-fit: contain;
+}
+
+.brown-image-left {
+  z-index: 0;
+  transform: translate(-20px, -20px); 
+  
+}
+
+.model3-image {
+  z-index: 1;
+  
+}
+/* Circle positions */
+.support-circle-6 {
+  top: -4%;
+  left: 92%;
+  width: 140px;
+  height: 140px;
+}
+.support-circle-7 {
+  top: 94.5%;
+  left: -3.3%;
+  width: 150px;
+  height: 150px;
+  opacity: 0.9;
+}
+
+
+/* Community Section */
+
+.community-section {
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 1rem;
+  background-color: #F8FEFF;
+  box-sizing: border-box;
+}
+.row-community {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  padding: 4rem 6rem 1rem 6rem;
+  
+  align-items: stretch; 
+}
+.community-image-cont {
+  flex: 1;
+  min-height: 446px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-right: 1rem; /* helps prevent right overflow */
+  box-sizing: border-box;
+}
+
+.img-stack-community {
+  position: relative;
+  width: 100%;
+  max-width: 500px; /* Optional limit for desktop */
+  aspect-ratio: 16 / 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.img-stack-community img {
+  position: absolute;
+  width: 100%;   /* Force both to scale with parent width */
+  height: 100%;  /* Maintain aspect ratio of each image */
+  object-fit: cover;
+  border-radius: 20px;
+}
+.review-card-grey {
+  flex: 1; 
+  background-color: #F4F4F4;
+  min-height: 300px;
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  justify-content: space-between;
+  display: flex;                /* allow column layout */
+  flex-direction: column;    
+}
+.review-card {
+  flex: 1; 
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  justify-content: space-between;
+  display: flex;                /* allow column layout */
+  flex-direction: column;    
+}
+
+.review-card p {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.img-stack-review {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; /* space between photo and stars */
+}
+
+/*Review Blue */
+.review-card {
+  background-color: #1f2937;
+}
+.review-card p {
+  color: #FFFFFF;
+}
+.review-card h4 {
+  color: #FFFFFF;
+}
+.names-reviews {
+  text-align: center;
+  font-size: 1rem;
+  padding: 1.5rem 0rem;
+  color: #070a13;
+}
+.profile-photo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.stars {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.star-review {
+  width: 25px;
+  height: 25px;
+}
+
+
+/* Circle positions */
+.community-circle-8 {
+  top: 91%;
+  left: 91%;
+  width: 150px;
+  height: 150px;
+}
+
+p {
+  margin-top: 1rem;
+  line-height: 1.6;
+  font-size: 17px;
+}
+.button-cont {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  font-size: 17px;
+}
+a button {
+  background-color: #c04c40;
+  border: none;
+  color: white;
+  padding: 0.90rem 3rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 30px;
+}
+
+/* Tutoring Section */
+.tutoring-section {
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 1rem;
+  background-color: #FFFCF9;
+  box-sizing: border-box;
+}
+.row-tutoring {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  padding: 4rem 6rem 1rem 6rem;
+  align-items: center;
+}
+
+.img-stack-tutoring {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;  /* smaller & consistent */
+  aspect-ratio: 16 / 9;
+        /* natural height */
+  margin: 0;
+  border-radius: 12px;
+  overflow: visible;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 0; 
+}
+.img-stack-history {
+  position: relative;
+  width: 100%;
+  max-width: 500px; /* Optional limit for desktop */
+  aspect-ratio: 4 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  overflow: visible; /* ✅ make sure shadow shows */
+  z-index: 0; 
+}
+
+.img-stack-tutoring img {
+  width: 100%;
+  height: auto;  /* keep proportions */
+  object-fit: cover;
+  border-radius: 12px;
+  position: relative; /* no absolute positioning */
+}
+.tutoring-img-cont {
+  flex: 1;
+  width: 33.3%;
+  box-sizing: border-box;
+
+  /* Make it behave like a vertical card */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  padding: 1rem 0;
+  background-color: #F4F4F4;
+  border-radius: 30px;
+
+  padding: 0rem 0rem;
+  background-color: #F4F4F4;
+  border-radius: 30px;
+  justify-content: space-between; /* space out image and text evenly */
+}
+
+.tutoring-img-cont h4 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.tutoring-img-cont p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 0.5rem;
+  
+}
+
+/* Image wrapper */
+
+.model2-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* Circle positions */
+.tutoring-circle-9 {
+  top: 15%;
+  left: -5%;
+  width: 130px;
+  height: 130px;
+}
+
+/* Action Section */
+.action-section {
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 1rem;
+  background-color: #FFFFFF;
+  padding: 4rem;
+  box-sizing: border-box;
+}
+
+.bckg-action {
+  position: relative; /* Required for z-index to take effect */
+  z-index: 1; /* Put it above the background circle */
+  text-align: center;
+  background-color: #1F3158;
+  color: white;
+  padding: 5rem;
+  margin: 4rem;
+  border-radius: 35px;
+}
+
+/* Circle positions */
+.action-circle-10 {
+  position: absolute;
+  top: -4%;
+  left: 93%;
+  width: 150px;
+  height: 150px;
+  opacity: 0.9;
+  z-index: 0; /* Send it to the back */
+}
+.action-circle-11 {
+  position: absolute;
+  top: 80%;
+  left: -5%;
+  width: 220px;
+  height: 220px;
+  opacity: 0.9;
+  z-index: 0; /* Send it to the back */
+}
+
+/*Change header color for the section */
+header {
+background-color: #FFFCF9;
+}
+
+
+/* Mobile: up to 768px */
+@media screen and (max-width: 768px) {
+
+  .headings {
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 1.5rem 0rem;
+  }
+  .headings-white {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .button-cont button {
+    width: 100%;
+    max-width: 280px;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+
+  /* INFO SECTION MOBILE*/
+  .row-info {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .info-images,
+  .info-text {
+    width: 100%;
+    max-width: 90%;
+    padding: 0 1rem; 
+  }
+
+  .img-stack-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .brown-image,
+  .model1-image {
+    width: 90%;
+    height: auto;
+  }
+
+  .sub-text {
+    display: block;
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+
+  .text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  /* Circle positions */
+  .orange-circle-1 {
+    top: 3%;
+    left: -17%;
+    width: 120px;
+    height: 120px;
+    opacity: 0.7;
+  }
+  .orange-circle-2 {
+    top: 95%;
+    left: 73%;
+    width: 120px;
+    height: 120px;
+    opacity: 0.7;
+  }
+
+  /*HISTORY SECTION MOBILE*/
+  .row-history {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+
+  }
+  .history-img-cont {
+    order: -1; /* Move image to the top */
+    justify-content: center;
+  }
+
+  .history-text-cont,
+  .history-img-cont {
+    width: 100%;
+    max-width: 90%;
+ 
+  }
+
+  .img-stack-history {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 80%;
+  }
+
+  .learnhall-info-text a {
+    display: flex;
+    justify-content: center;
+  }
+
+  .brown-circle-2 {
+  top: 94%;
+  left: -7%;
+  width: 150px;
+  height: 150px;
+  opacity: 0.5;
+}
+  
+  /*EDUCATION SECTION MOBILE*/
+  .row-education {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  .educational-image-cont,
+  .text-education {
+    width: 100%;
+    max-width: 85%;
+    padding: 0 1rem; /* Padding to prevent text touching screen edges */
+  }
+
+  .img-stack-education {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+
+  }
+
+  .model3-image {
+    z-index: 1;
+  }
+
+  .text-education {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  /* Circle positions */
+  .educ-circle-3 {
+    top: 96%;
+    left: 80%;
+    width: 180px;
+    height: 180px;
+    opacity: 0.8;
+  }
+
+
+  /* SCHOOL SECTION MOBILE*/
+  .row-school,
+  .row-school-center {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+  }
+
+  /* Full-width image containers */
+  .school-image-cont,
+  .school-text-cont {
+    width: 100%;
+    max-width: 85%;
+
+  }
+
+  .img-stack-school {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .img-stack-school img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .model3-image,
+  .model4-image {
+    z-index: 1;
+  }
+
+  /* Centered text block styles */
+  .learnhall-info-text-centered {
+    max-width: 90%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .school-text-cont p,
+  .learnhall-info-text-centered p {
+    font-size: 1rem;
+    line-height: 1.6;
+    
+  }
+
+  /* CTA Button centering */
+  .center-button-row {
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  /* Decorative circles (optional adjustments) */
+  .school-circle-4,
+  .school-circle-5 {
+    width: 180px;
+    height: 180px;
+    opacity: 0.7;
+  }
+  /* Circle positions */
+  .school-circle-4 {
+    top: -2%;
+    left: -22%;
+  }
+  .school-circle-5 {
+    top: 97%;
+    left: -4.5%;
+  }
+
+  /* COMMUNITY SECTION MOBILE*/
+  .row-community {
+    flex-direction: column;
+    padding: 2rem 1.5rem 1rem 1.5rem;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .community-image-cont {
+    width: 100%;
+    padding-right: 0;
+    justify-content: center;
+  }
+
+  .img-stack-community {
+    max-width: 90%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .img-stack-community img {
+    border-radius: 15px;
+  }
+  .text-community {
+    max-width: 90%;
+  }
+
+  .community-text-cont {
+    width: 100%;
+    text-align: center;
+  }
+
+  .button-cont {
+    justify-content: center;
+  }
+
+  .community-circle-6 {
+    top: 95%;
+    left: 80%;
+    width: 120px;
+    height: 120px;
+    opacity: 0.8;
+  }
+  /* TUTORING SECTION MOBILE */
+    .tutoring-img-cont {
+    flex: 1 1 calc(50% - 1rem); /* 2 cards per row */
+    max-width: 48%;
+  }
+
+  .img-stack-tutoring {
+    max-width: 250px; /* slightly smaller images */
+  }
+
+  /*ACTION SECTION MOBILE*/
+  .action-section {
+    padding: 3.5rem 4rem; 
+  }
+
+  .bckg-action {
+    padding: 5rem 1.2rem;
+    margin: 2rem 0.5rem; 
+    border-radius: 25px;
+  }
+
+  .bckg-action p {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 1rem;
+  }
+
+  .button-cont button {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .action-circle-7 {
+    width: 200px;
+    height: 200px;
+    top: 80%;
+    left: -5%;
+    opacity: 1;
+  }
+
+}
+
