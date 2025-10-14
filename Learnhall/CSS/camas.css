@@ -298,43 +298,46 @@ section.education-section {
   gap: 2rem;
   justify-content: space-between;
   align-items: center;
-  padding: 4rem 6rem 2rem 6rem;
+  padding: 4rem 3rem 2rem 3rem;
   margin-bottom: 3rem;
-  align-items: stretch;
 }
+
 #App > section.education-section > div:nth-child(2) {
   margin-top: 3.5rem;
 }
-.educational-main-img-cont {
+/* Main Image Top*/
+.educational-main-image-cont {
   flex: 1;
   width: 50%;
-  position: relative; 
+  position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end; /* push image to the right side */
   align-items: center;
-  padding-right: 1rem; /* helps prevent right overflow */
+  padding: 3rem;
   box-sizing: border-box;
 }
+
 .img-main-stack-education {
   position: relative;
   width: 100%;
-  height: 100%;
-  max-width: 500px; /* Optional limit for desktop */
-  aspect-ratio: 16 / 9;
+  max-width: 500px;
+  aspect-ratio: 4 / 3;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  overflow: visible; /* allow shadow to show */
+  z-index: 0;
 }
+
 .img-main-stack-education img {
+  position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
-  position: relative; 
 }
 
-/*School cards*/
+/*School and education cards*/
 
 .educational-image-cont {
   flex: 0 1 auto;             /* no ocupará todo el espacio */
@@ -367,7 +370,11 @@ section.education-section {
   border-radius: 20px 20px 0px 0px;
   position: relative; /* ❌ elimina absolute para que no se superponga */
 }
-
+.education-section .educational-image-cont {
+  flex: 1 1 calc(50% - 2rem);
+  max-width: calc(50% - 2rem);
+}
+/*Decoration */
 
 .brown-image-left-bottom {
   max-width: 55%;
@@ -380,9 +387,9 @@ section.education-section {
   transform: translate(-50%, -8%); 
 }
 .brown-image-right-top {
-  max-width: 55%;
+  max-width: 90%;
   z-index: 0;
-  transform: translate(166%, -9%); 
+  transform: translate(12%, -8%); 
 }
 
 .brown-image-right-bottom {
@@ -461,7 +468,6 @@ section.school-section {
   justify-content: space-between;
   align-items: center;
   padding: 4rem 6rem 5rem 6rem;
-  
 }
 .row-school-center {
   display: flex;
@@ -1123,20 +1129,53 @@ background-color: #FFFCF9;
     gap: 2rem;
     margin-bottom: 2rem;
   }
+
+  .educational-image-cont,
+  .text-education {
+    width: 100% ;
+    max-width: 85%;
+    padding: 0; /* Padding to prevent text touching screen edges */
+  }
+  .education-section .row-education {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .education-section .educational-image-cont,
+  .education-section .text-education {
+    width: 100%;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .education-section .img-stack-education {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
+  /* Full-width image containers */
   .educational-image-cont,
   .text-education {
     width: 100%;
     max-width: 85%;
-    padding: 0 1rem; /* Padding to prevent text touching screen edges */
+
   }
 
   .img-stack-education {
-    display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 100%;
-
   }
+
+  .img-stack-education img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
 
   .model3-image {
     z-index: 1;
