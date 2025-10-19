@@ -198,6 +198,8 @@ footer hr {
   font-size: 0.9rem;
   flex-wrap: wrap;
   gap: 1rem;
-
-  padding: 0 3rem 1rem;  /* 👈 laterales = 2rem, abajo = 1rem */
+  padding: 0 3rem 1rem;  /* laterales = 2rem, abajo = 1rem */
+}
+#App > footer > div.container.footer-grid > div.footer-right > div h4 {
+  padding: 1.2rem 0rem;
 }
