@@ -15,6 +15,16 @@
     transform: translateX(0);
   }
 }
+
+@keyframes slideReviews {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /*General styles*/
 p {
   text-align: justify;
@@ -400,18 +410,22 @@ a button {
 /* HOMESCHOOLING SECTION STYLES */
 .school-section {
   position: relative;
-  padding: 100px 20px 140px; /* top, sides, bottom (expanded bottom) */
-  background-color: #fff; /* optional, keep section consistent */
+  overflow: hidden;
+  padding: 4rem 1rem 7rem 1rem;
+  box-sizing: border-box;
 }
 
 .row-school {
+  
+  margin: 0 auto;
+
+
   display: flex;
   flex-wrap: wrap;
+  gap: 3rem;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 40px;
+  padding: 4rem 6rem 1rem 6rem;
 }
 #App > section.school-section > div:nth-child(2){
   margin-bottom: 5rem;
@@ -488,7 +502,7 @@ a button {
 /* “Why Tigard Families Choose Learnhall” Section */
 .why-learnhall-section {
   padding: 80px 20px;
-  background-color: #fdf9f4;
+  background-color: #fff2e9;
   position: relative;
 }
 
@@ -552,7 +566,7 @@ a button {
 }
 
 .why-learnhall-section {
-  background-color: #FFFBF8; /* give only this section bg color */
+  
   padding: 4rem 2rem;
 }
 .diam-cont {
@@ -596,9 +610,10 @@ a button {
 
 .community-section {
   position: relative;
+  z-index: 1; /* sits below reviews-section */
   overflow: hidden;
   padding: 4rem 1rem;
-  background-color: #FFFBF8;
+  background-color: #ffffff;
   box-sizing: border-box;
 }
 .row-community {
@@ -615,9 +630,13 @@ a button {
   gap: 2rem;
   justify-content: center;  /* ✅ center whole row */
   align-items: center;      /* ✅ vertically align all */
-  padding: 4rem 6rem 1rem 6rem;
+  padding: 2rem 6rem 1rem 6rem;
 }
 .community-image-cont {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border-radius: 1rem;
+  height: 153px;
   flex: 1; width: 50%; 
   position: relative; 
   display: flex; 
@@ -693,32 +712,39 @@ a button {
 /* REVIEWS SECTION*/
 
 .reviews-section {
+  position: relative;
+  margin-top: -100px; /* pulls section upward into previous one */
+  margin-bottom: -120px;
+  z-index: 10; /* ensures it's visually above */
   transform: rotate(-4deg);
   overflow: hidden;
-  
-  position: relative;
-  overflow: hidden;
-  padding: 1rem 1rem;
-  background-color: #FFFBF8;
+  padding: 3rem 1rem;
   box-sizing: border-box;
 }
 
 .row-reviews {
   display: flex; 
-  flex-wrap: wrap; 
+  flex-wrap: nowrap; /* keep in one row */
   gap: 2rem; 
-  justify-content: space-between; 
-  padding: 4rem 6rem 1rem 6rem; 
+  padding: 3rem 6rem 3rem 6rem; 
   align-items: center;
+  animation: slideReviews 18s linear infinite;
+}
+
+.community-image-cont {
+  flex: 0 0 30rem; /* width of each review card */
+}
+.row-reviews:hover {
+  animation-play-state: paused;
 }
 
 /* ACTION SECTION */
 .action-section {
   position: relative;
+  z-index: 1;
   overflow: hidden;
-  padding: 4rem 1rem;
   background-color: #FAF0E9;
-  padding: 4rem;
+  padding: 5rem 1rem;
   box-sizing: border-box;
 }
 
@@ -997,48 +1023,49 @@ background-color: #F6FCFF;
   }
 
   /* COMMUNITY SECTION MOBILE*/
-  .row-community {
-    flex-direction: column;
-    padding: 2rem 1.5rem 1rem 1.5rem;
-    gap: 2rem;
-    text-align: center;
+  
+  .row-community-nowrap {
+    flex-direction: column;   /* stack vertically */
+    align-items: center;      /* center everything */
+    padding: 2rem 1.5rem;     /* reduce padding for smaller screens */
   }
 
-  .community-image-cont {
-    width: 100%;
-    padding-right: 0;
-    justify-content: center;
+  .community-image-cont-nowrap {
+    flex: none;               /* allow it to shrink naturally */
+    width: 100%;              /* full width image container */
+    margin-bottom: 2rem;      /* spacing below image */
   }
 
   .img-stack-community {
-    max-width: 90%;
-    aspect-ratio: 16 / 9;
+    width: 90%;               /* slightly smaller than full width */
+    max-width: 400px;
+    aspect-ratio: 4 / 3;      /* adjust ratio for mobile images */
   }
 
-  .img-stack-community img {
-    border-radius: 15px;
-  }
   .text-community {
-    max-width: 90%;
-  }
-
-  .community-text-cont {
+    flex: none;
     width: 100%;
-    text-align: center;
+    text-align: left;         /* more natural reading on mobile */
+    margin-top: 1rem;
   }
 
-  .button-cont {
-    justify-content: center;
+  .text-community h2 {
+    font-size: 1.8rem;        /* smaller heading */
+    text-align: center;       /* but center the title */
+    margin-bottom: 1rem;
   }
 
-  .community-circle-6 {
-    top: 95%;
-    left: 80%;
-    width: 120px;
-    height: 120px;
-    opacity: 0.8;
+  .text-community p {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 0 0.5rem;
   }
 
+  /* 🖼️ Hide one of the two images (keep the first one only) */
+  .community-image-cont-nowrap:last-child {
+    display: none;
+  }
+  
   /*ACTION SECTION MOBILE*/
   .action-section {
     padding: 3.5rem 4rem; 

@@ -52,8 +52,9 @@ function handleServiceWorksScroll() {
     }
   });
 }
-
-// Attach the scroll event listeners for all sections
-window.addEventListener("scroll", handleChooseUsScroll);
-window.addEventListener("scroll", handleVideoScroll);
-window.addEventListener("scroll", handleServiceWorksScroll);
+//Clones review cards automatically for the slider
+document.addEventListener("DOMContentLoaded", () => {
+  const row = document.querySelector(".row-reviews");
+  const clone = row.innerHTML; // duplicate all cards
+  row.innerHTML += clone; // append them
+});
