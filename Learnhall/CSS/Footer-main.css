@@ -174,23 +174,23 @@ footer hr {
 }
 /* Footer lists */
 .footer-right ul {
-  list-style: none;   /* quita los bullet points */
+  list-style: none;   /* no bullet points */
   margin: 0;
   padding: 0;
 }
 
 .footer-right ul li {
-  margin-bottom: 0.6rem; /* espacio entre items */
+  margin-bottom: 0.6rem; /* spacing between items */
 }
 
 .footer-right ul li a {
-  color: #ffffffe5;        /* consistente con tu esquema */
-  text-decoration: none;   /* sin subrayado */
+  color: #ffffffe5;        
+  text-decoration: none;  
   transition: color 0.3s ease;
 }
 
 .footer-right ul li a:hover {
-  color: #ffffff;          /* más claro al hacer hover */
+  color: #ffffff;          
 }
 .copywrite {
   display: flex;
@@ -198,7 +198,7 @@ footer hr {
   font-size: 0.9rem;
   flex-wrap: wrap;
   gap: 1rem;
-  padding: 0 3rem 1rem;  /* laterales = 2rem, abajo = 1rem */
+  padding: 0 3rem 1rem;  
 }
 #App > footer > div.container.footer-grid > div.footer-right > div h4 {
   padding: 1.2rem 0rem;
