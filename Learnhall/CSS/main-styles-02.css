@@ -939,88 +939,103 @@ background-color: #F6FCFF;
     opacity: 0.8;
   }
 
-
-  /* SCHOOL SECTION MOBILE*/
-  .row-school,
-  .row-school-center {
+  /* --- STRUCTURE --- */
+  .row-school {
+    display: flex;
     flex-direction: column;
     padding: 2rem 1.5rem;
     gap: 2rem;
   }
 
-  /* Full-width image containers */
-  .school-image-cont,
-  .school-text-cont {
-    width: 100%;
-    max-width: 85%;
+  /* --- SCHOOL SECTION  MOBILE --- */
+/* SCHOOL SECTION MOBILE*/
+.row-school,
+.row-school-center {
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  gap: 2rem;
+}
 
-  }
+/* Full-width image containers */
+.school-image-cont,
+.school-text-cont {
+  width: 100%;
+  max-width: 85%;
+}
 
-  .img-stack-school {
-    width: 100%;
-    height: auto;
-  }
+.img-stack-school {
+  width: 100%;
+  height: auto;
+}
 
+.homeschooling-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
 
-  .homeschooling-image-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 1rem;  /* spacing between tan block and image */
-  }
-  .img-stack-school img {
-    width: 50%;
-    height: 100%;
-    object-fit: cover;
+.img-stack-school img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
 
-  }
+.model4-image {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 0;
+  left: 0;
+}
 
-  .model4-image {
-    width: 100%;
-    height: auto;
-    position: relative;
-    top: 0;
-    left: 0;
-  }
+/* --- ADD THIS PART (ONLY NEW CODE) --- */
+.row-school .school-image-cont {
+  order: 1;
+}
 
-  /* Centered text block styles */
-  .learnhall-info-text-centered {
-    max-width: 90%;
-    text-align: center;
-    margin: 0 auto;
-  }
+.row-school .text-education {
+  order: 2;
+  text-align: center;
+}
+/* -------------------------------------- */
 
-  .school-text-cont p,
-  .learnhall-info-text-centered p {
-    font-size: 1rem;
-    line-height: 1.6;
-    
-  }
+.learnhall-info-text-centered {
+  max-width: 90%;
+  text-align: center;
+  margin: 0 auto;
+}
 
-  /* CTA Button centering */
-  .center-button-row {
-    justify-content: center;
-    text-align: center;
-    padding-bottom: 1rem;
-  }
+.school-text-cont p,
+.learnhall-info-text-centered p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
 
-  /* Decorative circles (optional adjustments) */
-  .school-circle-4,
-  .school-circle-5 {
-    width: 180px;
-    height: 180px;
-    opacity: 0.7;
-  }
-  /* Circle positions */
-  .school-circle-4 {
-    top: -2%;
-    left: -22%;
-  }
-  .school-circle-5 {
-    top: 97%;
-    left: -4.5%;
-  }
+.center-button-row {
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.school-circle-4,
+.school-circle-5 {
+  width: 180px;
+  height: 180px;
+  opacity: 0.7;
+}
+
+.school-circle-4 {
+  top: -2%;
+  left: -22%;
+}
+
+.school-circle-5 {
+  top: 97%;
+  left: -4.5%;
+}
+
 
   /* COMMUNITY SECTION MOBILE*/
   
