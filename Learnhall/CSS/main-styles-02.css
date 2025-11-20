@@ -76,8 +76,8 @@ p {
 
 .img-stack-info img {
   position: absolute;
-  width: 70%;   /* Force both to scale with parent width */
-  height: 170%;  /* Maintain aspect ratio of each image */
+  width: 80%;   /* Force both to scale with parent width */
+  height: 100%;  /* Maintain aspect ratio of each image */
   object-fit: cover;
   border-radius: 20px;
 }
@@ -779,6 +779,10 @@ background-color: #F6FCFF;
 /* Mobile: up to 768px */
 @media screen and (max-width: 768px) {
 
+  #App > section.info-section > div.row-info > div.info-text > div {
+    text-align: center;
+  }
+
   .mini-header {
     text-align: center;
     font-size: 1.5rem;
@@ -828,7 +832,6 @@ background-color: #F6FCFF;
   .model1-image {
     width: 90%;
     height: auto;
-    margin-bottom: 40%;
   }
 
   .sub-text {
@@ -977,7 +980,7 @@ background-color: #F6FCFF;
 }
 
 .img-stack-school img {
-  width: 50%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
